@@ -25,13 +25,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-footer {
-    clear: both;
-    position: relative;
-    height: 200px;
-    margin-top: -200px;
-}
-
 img {
   max-width: 100%;
   height: auto;
