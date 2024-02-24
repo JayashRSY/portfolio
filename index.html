@@ -1,708 +1,856 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
+
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Jayash</title>
-	<meta name="description" content="Jayash">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<link rel="shortcut icon" type="image/x-icon" href="images/pic.png">
-<link rel="shortcut icon" type="image/x-icon" href="images/pic.png?">
-	<!-- STYLESHEETS -->
-	<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" media="all">
-	<link rel="stylesheet" href="css/all.min.css" type="text/css" media="all">
-	<link rel="stylesheet" href="css/simple-line-icons.css" type="text/css" media="all">
-	<link rel="stylesheet" href="css/slick.css" type="text/css" media="all">
-	<link rel="stylesheet" href="css/animate.css" type="text/css" media="all">
-	<link rel="stylesheet" href="css/magnific-popup.css" type="text/css" media="all">
-	<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-	<!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Personal Portfolio Website Template" />
+    <meta name="keywords"
+        content="blog, business card, creative, creative portfolio, cv theme, online resume, personal, portfolio, professional cv, responsive portfolio, resume, resume theme, vcard" />
+    <meta name="author"
+        content="Jayash" />
+    <title>Jayash</title>
+    <!--favicon-img-->
+    <link rel="icon"
+        type="image/png"
+        href="images/favicon.png">
+    <!--favicon-img-->
+    <!--main css file should not be removed -->
+    <link rel="stylesheet"
+        href="css/index.css">
+    <!--main css file-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
 
 </head>
 
 <body>
-
-<!-- Preloader -->
-<div id="preloader" class="light">
-	<div class="outer">
-		<!-- Google Chrome -->
-		<div class="infinityChrome">
-			<div></div>
-			<div></div>
-			<div></div>
-		</div>
-
-		<!-- Safari and others -->
-		<div class="infinity">
-			<div>
-				<span></span>
-			</div>
-			<div>
-				<span></span>
-			</div>
-			<div>
-				<span></span>
-			</div>
-		</div>
-		<!-- Stuff -->
-		<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo-outer">
-			<defs>
-				<filter id="goo">
-					<feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur" />
-					<feColorMatrix in="blur" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
-					<feBlend in="SourceGraphic" in2="goo" />
-				</filter>
-			</defs>
-		</svg>
-	</div>
-</div>
-
-<!-- mobile header -->
-<header class="mobile-header-1 light">
-	<div class="container">
-		<!-- menu icon -->
-		<div class="menu-icon d-inline-flex mr-4">
-			<button>
-				<span></span>
-			</button>
-		</div>
-		<!-- logo image -->
-	</div>
-</header>
-
-<!-- desktop header -->
-<header class="desktop-header-1 light d-flex align-items-start flex-column">
-	
-	<!-- logo image -->
-	<div class="site-logo">
-		<a href="index.html">
-			<img src="images/name.png" height="40" width="150" alt="Jayash" />
-		</a>
-	</div>
-	
-	<!-- main menu -->
-	<nav>
-		<ul class="vertical-menu scrollspy">
-			<li class="active"><a href="#home"><i class="icon-home"></i>Home</a></li>
-			<li><a href="#about"><i class="icon-user-following"></i>About</a></li>
-			<li><a href="#services"><i class="icon-flag"></i>Services</a></li>
-			<li><a href="#education"><i class="icon-graduation"></i>Education</a></li>
-			<li><a href="#experience"><i class="icon-briefcase"></i>Certifications</a></li>
-			
-			<li><a href="#contact"><i class="icon-bubbles"></i>Contact</a></li>
-		</ul>
-	</nav>
-	
-	<!-- site footer -->
-	<div class="footer">
-		<!-- copyright text -->
-		<span class="copyright">© Jayash</span>
-	</div>
-
-</header>
-
-<!-- main layout -->
-<main class="content">
-	
-	<!-- section home -->
-	<section id="home" class="home d-flex light align-items-center">
-		<div class="container">
-
-			<!-- intro -->
-			<div class="intro">
-				<!-- avatar image -->
-				<img src="images/pic.png" height="500" width="500" alt="jayash" class="mb-4" />
-
-				<!-- info -->
-				<h1 class="mb-2 mt-0">Jayash Raj Singh Yadav</h1>
-				<span>I'm a  <span class="text-rotating"> Programmer,Web Developer, Content creator</span></span>
-
-				<!-- social icons -->
-				<ul class="social-icons light list-inline mb-0 mt-4">
-					<li class="list-inline-item"><a target="_blank" href="https://www.linkedin.com/in/jayashrsy/"><i class="fab fa-linkedin"></i></a></li>
-					
-					<li class="list-inline-item"><a target="_blank" href="https://github.com/JayashRSY"><i class="fab fa-github"></i></a></li>
-                                        <li class="list-inline-item"><a target="_blank" href="https://www.instagram.com/jayashrsy/"><i class="fab fa-instagram"></i></a></li>
-			
-
-				</ul>
-
-				<!-- buttons -->
-				<div class="mt-4">
-					<a href="#contact" class="btn btn-default">Say Hi!</a>
-				</div>
-			</div>
-			<br><br><br>
-			<!-- scroll down mouse wheel -->
-			<div class="scroll-down light">
-				<a href="#about" class="mouse-wrapper">
-					<span>Scroll Down</span>
-					<span class="mouse">
-						<span class="wheel"></span>
-					</span>
-				</a>
-			</div>
-
-			<!-- parallax layers -->
-			<div class="parallax" data-relative-input="true">
-
-				<svg width="27" height="29" data-depth="0.3" class="layer p1" xmlns="http://www.w3.org/2000/svg"><path d="M21.15625.60099c4.37954 3.67487 6.46544 9.40612 5.47254 15.03526-.9929 5.62915-4.91339 10.30141-10.2846 12.25672-5.37122 1.9553-11.3776.89631-15.75715-2.77856l2.05692-2.45134c3.50315 2.93948 8.3087 3.78663 12.60572 2.22284 4.297-1.5638 7.43381-5.30209 8.22768-9.80537.79387-4.50328-.8749-9.08872-4.37803-12.02821L21.15625.60099z" fill="#FFD15C" fill-rule="evenodd"/></svg>
-
-				<svg width="26" height="26" data-depth="0.2" class="layer p2" xmlns="http://www.w3.org/2000/svg"><path d="M13 3.3541L2.42705 24.5h21.1459L13 3.3541z" stroke="#FF4C60" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
-
-				<svg width="30" height="25" data-depth="0.3" class="layer p3" xmlns="http://www.w3.org/2000/svg"><path d="M.1436 8.9282C3.00213 3.97706 8.2841.92763 14.00013.92796c5.71605.00032 10.9981 3.04992 13.85641 8 2.8583 4.95007 2.8584 11.0491-.00014 16.00024l-2.77128-1.6c2.28651-3.96036 2.28631-8.84002.00011-12.8002-2.2862-3.96017-6.5124-6.40017-11.08513-6.4-4.57271.00018-8.79872 2.43984-11.08524 6.4002l-2.77128-1.6z" fill="#44D7B6" fill-rule="evenodd"/></svg>
-
-				<svg width="15" height="23" data-depth="0.6" class="layer p4" xmlns="http://www.w3.org/2000/svg"><rect transform="rotate(30 9.86603 10.13397)" x="7" width="3" height="25" rx="1.5" fill="#FFD15C" fill-rule="evenodd"/></svg>
-
-				<svg width="15" height="23" data-depth="0.2" class="layer p5" xmlns="http://www.w3.org/2000/svg"><rect transform="rotate(30 9.86603 10.13397)" x="7" width="3" height="25" rx="1.5" fill="#6C6CE5" fill-rule="evenodd"/></svg>
-
-				<svg width="49" height="17" data-depth="0.5" class="layer p6" xmlns="http://www.w3.org/2000/svg"><g fill="#FF4C60" fill-rule="evenodd"><path d="M.5 16.5c0-5.71709 2.3825-10.99895 6.25-13.8567 3.8675-2.85774 8.6325-2.85774 12.5 0C23.1175 5.50106 25.5 10.78292 25.5 16.5H23c0-4.57303-1.90625-8.79884-5-11.08535-3.09375-2.28652-6.90625-2.28652-10 0C4.90625 7.70116 3 11.92697 3 16.5H.5z"/><path d="M23.5 16.5c0-5.71709 2.3825-10.99895 6.25-13.8567 3.8675-2.85774 8.6325-2.85774 12.5 0C46.1175 5.50106 48.5 10.78292 48.5 16.5H46c0-4.57303-1.90625-8.79884-5-11.08535-3.09375-2.28652-6.90625-2.28652-10 0-3.09375 2.28651-5 6.51232-5 11.08535h-2.5z"/></g></svg>
-
-				<svg width="26" height="26" data-depth="0.4" class="layer p7" xmlns="http://www.w3.org/2000/svg"><path d="M13 22.6459L2.42705 1.5h21.1459L13 22.6459z" stroke="#FFD15C" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
-
-				<svg width="19" height="21" data-depth="0.3" class="layer p8" xmlns="http://www.w3.org/2000/svg"><rect transform="rotate(-40 6.25252 10.12626)" x="7" width="3" height="25" rx="1.5" fill="#6C6CE5" fill-rule="evenodd"/></svg>
-
-				<svg width="30" height="25" data-depth="0.3" data-depth-y="-1.30" class="layer p9" xmlns="http://www.w3.org/2000/svg"><path d="M29.8564 16.0718c-2.85854 4.95114-8.1405 8.00057-13.85654 8.00024-5.71605-.00032-10.9981-3.04992-13.85641-8-2.8583-4.95007-2.8584-11.0491.00014-16.00024l2.77128 1.6c-2.28651 3.96036-2.28631 8.84002-.00011 12.8002 2.2862 3.96017 6.5124 6.40017 11.08513 6.4 4.57271-.00018 8.79872-2.43984 11.08524-6.4002l2.77128 1.6z" fill="#6C6CE5" fill-rule="evenodd"/></svg>
-
-				<svg width="47" height="29" data-depth="0.2" class="layer p10" xmlns="http://www.w3.org/2000/svg"><g fill="#44D7B6" fill-rule="evenodd"><path d="M46.78878 17.19094c-1.95535 5.3723-6.00068 9.52077-10.61234 10.8834-4.61167 1.36265-9.0893-.26708-11.74616-4.27524-2.65686-4.00817-3.08917-9.78636-1.13381-15.15866l2.34923.85505c-1.56407 4.29724-1.2181 8.92018.90705 12.12693 2.12514 3.20674 5.70772 4.5107 9.39692 3.4202 3.68921-1.0905 6.92581-4.40949 8.48988-8.70673l2.34923.85505z"/><path d="M25.17585 9.32448c-1.95535 5.3723-6.00068 9.52077-10.61234 10.8834-4.61167 1.36264-9.0893-.26708-11.74616-4.27525C.16049 11.92447-.27182 6.14628 1.68354.77398l2.34923.85505c-1.56407 4.29724-1.2181 8.92018.90705 12.12692 2.12514 3.20675 5.70772 4.5107 9.39692 3.4202 3.68921-1.0905 6.92581-4.40948 8.48988-8.70672l2.34923.85505z"/></g></svg>
-
-				<svg width="33" height="20" data-depth="0.5" class="layer p11" xmlns="http://www.w3.org/2000/svg"><path d="M32.36774.34317c.99276 5.63023-1.09332 11.3614-5.47227 15.03536-4.37895 3.67396-10.3855 4.73307-15.75693 2.77837C5.76711 16.2022 1.84665 11.53014.8539 5.8999l3.15139-.55567c.7941 4.50356 3.93083 8.24147 8.22772 9.8056 4.29688 1.56413 9.10275.71673 12.60554-2.2227C28.34133 9.98771 30.01045 5.4024 29.21635.89884l3.15139-.55567z" fill="#FFD15C" fill-rule="evenodd"/></svg>
-
-			</div>
-		</div>
-		
-	</section>
-
-	<!-- section about -->
-	<section id="about">
-
-		<div class="container">
-			
-			<!-- section title -->
-			<h2 class="section-title wow fadeInUp">About Me</h2>
-
-			<div class="spacer" data-height="60"></div>
-			
-			<div class="row">
-
-				<div class="col-md-12 triangle-left-md triangle-top-sm">
-					<div class="rounded bg-white shadow-dark padding-30">
-						<div class="row">
-							<div class="col-md-12">
-								<!-- about text -->
-								<p>I am the only person in this entire world I would love to know thoroughly. I believe life is too short to be serious all the time, so if you cannot laugh at yourself... call me.. Ill do it for you :p.</p>
-								<p>I don't hate anything or anybody. I passionately learn new things until I master them. Very light hearted and sportive person. Im one of those people who is a brilliant listener but at the end of the day does things finally what please my heart and feels right to me anyways. According to me... if nobody is against you, then you are doing something very boring. There is nothing called good or bad in this world (according to me)... its just a perspective... things I love doing and are good according to my like minded people are not acceptable by other un like minded people(if that is what they are called).</p>
-								<p>I like dark colours(Black lover). Im not at all filmy or dramatic. I like getting straight to the point. I either have a fight or be awesomely cool with you. Hanging in between is not my thing ,I am next level Introvert.</p>
-                                                                 <p>I love giving more than my best only if interested. I love learning new things and getting good at them.
-								</p>
-								<div class="mt-3">
-									<!-- <a href="#" class="btn btn-default">Download CV</a> -->
-								</div>
-								<div class="spacer d-md-none d-lg-none" data-height="30"></div>
-							</div>
-							
-						</div>
-					</div>
-				</div>
-
-			</div>
-			<!-- row end -->
-
-			<div class="spacer" data-height="70"></div>
-			
-			
-
-		</div>
-		
-	</section>
-	
-	<!-- section services -->
-	<section id="services">
-
-		<div class="container">
-			
-			<!-- section title -->
-			<h2 class="section-title wow fadeInUp">Services</h2>
-
-			<div class="spacer" data-height="60"></div>
-			
-			<div class="row">
-
-				<div class="col-md-4">
-					<!-- service box -->
-					<div class="service-box rounded data-background padding-30 text-center text-light shadow-blue" data-color="#6C6CE5">
-						<img src="images/content.png" alt="services by jayash" />
-						<h3 class="mb-3 mt-0">Content Writing</h3>
-						<p class="mb-0">
-						       Writing isn't about using big words to impress. It's about using simple words in an impressive way. According to me we should just Start writing, no matter what. The water doesn't flow until the faucet is turned on.
-						</p>
-					</div>
-					<div class="spacer d-md-none d-lg-none" data-height="30"></div>
-				</div>
-
-				<div class="col-md-4" data-wow-delay="0.2s">
-					<!-- service box -->
-					<div class="service-box rounded data-background padding-30 text-center shadow-yellow" data-color="#F9D74C">
-						<img src="images/web.png" alt="services by jayash" />
-						<h3 class="mb-3 mt-0">Web Development</h3>
-						<p class="mb-0">Learning HTML and CSS is a lot more challenging than it used to be. Responsive web design adds more layers of complexity to design and develop websites. And there is always something interesting to discover.</p>
-					</div>
-					<div class="spacer d-md-none d-lg-none" data-height="30"></div>
-				</div>
-
-				<div class="col-md-4" data-wow-delay="0.4s">
-					<!-- service box -->
-					<div class="service-box rounded data-background padding-30 text-center text-light shadow-pink" data-color="#F97B8B">
-						<img src="images/editor.jpg" alt="services by jayash" />
-						<h3 class="mb-3 mt-0">Graphic Design</h3>
-						<p class="mb-0">Today, the tools for computerized editing are in the hands of general public. Now, nearly every mobile or PC comes with basic editing softwares built in. And creativity can do wonders even with limited resources.</p>
-					</div>
-				</div>
-
-			</div>
-
-			<div class="mt-5 text-center">
-				<p class="mb-0">Looking for a freelancer? <a href="#contact">Click here</a> to contact me! 👋</p>
-			</div>
-
-		</div>
-		
-	</section>
-<!--section skills-->
-	<section id="skills">
-		<div class="container">
-			<h2 class="section-title wow fadeInUp">Skills</h2>
-			<div class="spacer" data-height="60"></div>
-			<div class="row">
-				
-				<div class="col-md-3 col-6">
-					<!-- client item -->
-					<div class="client-item">
-						<div class="inner">
-							<img src="images/cpp.png" alt="jayash skills" />
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3 col-6">
-					<!-- client item -->
-					<div class="client-item">
-						<div class="inner">
-							<img src="images/python.png" alt="jayash skills" />
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-md-3 col-6">
-					<!-- client item -->
-					<div class="client-item">
-						<div class="inner">
-							<img src="images/html5.png" alt="jayash skills" />
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3 col-6">
-					<!-- client item -->
-					<div class="client-item">
-						<div class="inner">
-							<img src="images/css.png" alt="jayash skills" />
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3 col-6">
-					<!-- client item -->
-					<div class="client-item">
-						<div class="inner">
-							<img src="images/javascript.png" alt="jayash skills" />
-						</div>
-					</div>
-				</div>
-                                <div class="col-md-3 col-6">
-					<!-- client item -->
-					<div class="client-item">
-						<div class="inner">
-							<img src="images/sql.png" alt="jayash skills" />
-						</div>
-					</div>
-				</div>
-                                <div class="col-md-3 col-6">
-					<!-- client item -->
-					<div class="client-item">
-						<div class="inner">
-							<img src="images/git-logo.png" alt="jayash skills" />
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3 col-6">
-					<!-- client item -->
-					<div class="client-item">
-						<div class="inner">
-							<img src="images/photoshop.png" alt="jayash skills" />
-						</div>
-					</div>
-				</div>
-			</div>
-
-		</div>
-	</section>
-	
-	<!-- section education -->
-	<section id="education">
-
-		<div class="container">
-			
-			<!-- section title -->
-			<h2 class="section-title wow fadeInUp">Education</h2>
-
-			<div class="spacer" data-height="60"></div>
-			
-			<div class="row">
-
-				<div class="col-md-12">
-					
-					<!-- timeline wrapper -->
-					<div class="timeline edu bg-white rounded shadow-dark padding-30 overflow-hidden">
-
-						<!-- timeline item -->
-						<div class="timeline-container wow fadeInUp">
-							<div class="content">
-								<span class="time">2019 - Present</span>
-								<h3 class="title">Bachelor’s of Technology, Computer Science Engineering</h3>
-								<p>Dr. APJ Abdul Kalam Technical University</p>
-							</div>
-						</div>
-
-						<!-- timeline item -->
-						<div class="timeline-container wow fadeInUp" data-wow-delay="0.2s">
-							<div class="content">
-								<span class="time">2018 - 2019</span>
-								<h3 class="title">Intermediate - PCM</h3>
-								<p>St. Dominic's Academy</p>
-							</div>
-						</div>
-
-						<!-- timeline item -->
-						<div class="timeline-container wow fadeInUp" data-wow-delay="0.4s">
-							<div class="content">
-								<span class="time">2016 - 2017</span>
-								<h3 class="title">High School</h3>
-								<p>St. Dominic's Academy</p>
-							</div>
-						</div>
-
-						<!-- main line -->
-						<span class="line"></span>
-
-					</div>
-
-				</div>
-			
-		
-
-			</div>
-
-		</div>
-		
-	</section>
-<!--section Certifications-->
-
-	<section id="experience">
-
-		<div class="container">
-			
-			<!-- section title -->
-			<h2 class="section-title wow fadeInUp">Certifications</h2>
-
-			<div class="spacer" data-height="60"></div>
-			
-			<div class="row">
-
-				
-
-				<div class="col-md-12">
-					
-					<!-- responsive spacer -->
-					<div class="spacer d-md-none d-lg-none" data-height="30"></div>
-
-					<!-- timeline wrapper -->
-					<div class="timeline exp bg-white rounded shadow-dark padding-30 overflow-hidden">
-						
-						
-						<!-- timeline item -->
-						<div class="timeline-container wow fadeInUp" data-wow-delay="0.2s">
-							<div class="content">
-								<span class="time">Python Institute</span>
-								<h3 class="title">PCAP - Programming Essentials in Python</h3>
-								<a href="https://drive.google.com/file/d/1B9FitHOSNEAmfE_aX5rUG_V7YO0bK71W/view?usp=sharing" target="_blank"><p>View</p></a>
-								
-							</div>
-						</div>
-						
-						<!-- timeline item -->
-						<div class="timeline-container wow fadeInUp" data-wow-delay="0.2s">
-							<div class="content">
-								<span class="time">Cisco Networking Academy</span>
-								<h3 class="title">Introduction to Cybersecurity</h3>
-								<a href="https://drive.google.com/file/d/1zZs397jqm8Ac9UqI4NzxrrCcHlAema6M/view?usp=sharing" target="_blank"><p>View</p></a>
-								
-							</div>
-						</div>
-
-						<!-- timeline item -->
-						<div class="timeline-container wow fadeInUp">
-							<div class="content">
-								<span class="time">FreeCodeCamp</span>
-								<h3 class="title">Responsive Web Design Certification</h3>
-								<a href="https://freecodecamp.org/certification/johnrakon/responsive-web-design"><p>View</p></a>
-								
-							</div>
-						</div>
-						
-						 <!-- timeline item -->
-						<div class="timeline-container wow fadeInUp" data-wow-delay="0.2s">
-							<div class="content">
-								<span class="time">Johns Hopkins University</span>
-								<h3 class="title">HTML, CSS and JavaScript for web developers</h3>
-								<a href="https://www.coursera.org/account/accomplishments/records/X5H6QW29UTA5"><p>View</p></a>
-								
-							</div>
-						</div>
-                                                    
-
-						<!-- timeline item -->
-						<div class="timeline-container wow fadeInUp" data-wow-delay="0.2s">
-							<div class="content">
-								<span class="time">Coursera</span>
-								<h3 class="title">Git + GitHub for Open Source Collaboration</h3>
-								<a href="https://www.coursera.org/account/accomplishments/verify/7BPMYCPXPWD6"><p>View</p></a>
-								
-							</div>
-						</div>
-                                                  <!-- timeline item -->
-						<div class="timeline-container wow fadeInUp" data-wow-delay="0.2s">
-							<div class="content">
-								<span class="time">Udemy</span>
-								<h3 class="title">Graphic Design Certification</h3>
-								<a href="https://www.udemy.com/certificate/UC-c823a667-6572-4e8d-8eb8-8a847e635e5d"><p>View</p></a>
-								
-							</div>
-						</div>
-                                                
-						
-                                               
-                                                  
-                                                  <!-- timeline item -->
-						<div class="timeline-container wow fadeInUp" data-wow-delay="0.4s">
-							<div class="content">
-								<span class="time">University of California, Davis</span>
-								<h3 class="title">Search Engine Optimization Fundamentals</h3>
-								<a href="https://www.coursera.org/account/accomplishments/verify/6WJRW3X37JJ6"><p>View</p></a>
-								
-							</div>
-						</div> 
-                                                  
-
-						<!-- main line -->
-						<span class="line"></span>
-
-					</div>
-					
-					
-<a target="_blank" a href="https://docs.google.com/spreadsheets/d/1yJgRYnOwY8kHUJTziMDCn8f8SOfs75M2dEiny-Jljbs/edit?usp=sharing">
-				<button type="button" name="submit" id="submit" value="Submit" class="btn btn-default">View All Certifications </button>
-			</a>
-					
-					
-				</div>
-				
-
-			</div>
-
-		</div>
-		
-	</section>
-	
-	
-		<!-- section Projects -->
-
-	<section id="works">
-
-		<div class="container">
-
-			<!-- section title -->
-			<h2 class="section-title wow fadeInUp">Projects</h2>
-
-			<div class="spacer" data-height="60"></div>
-
-			<!-- portolio wrapper -->
-			<div class="row portfolio-wrapper">
-
-				
-
-				<!-- portfolio item -->
-				<div class="col-md-4 col-sm-12 grid-item creative design">
-					<a href="#sos-calculator" class="work-content">
-						<div class="portfolio-item rounded shadow-dark">
-							<div class="details">
-								<span class="term">Web Calculator</span>
-								<h4 class="title">
-									Simple Web Calculator using HTML, CSS and Javascript
-                                                                     <br> <br> <a href="https://jayashrsy.github.io/onlinecalculator/ " target="_blank"> View</a>           
-								</h4>
-							</div>
-							<div class="thumb">
-								<img src="images/calculator.png" alt="Portfolio-title" />
-								<div class="mask"></div>
-							</div>
-						</div>
-					</a>
-					<div id="sos-calculator" class="white-popup zoom-anim-dialog mfp-hide">
-						<img src="images/calculator.jpg" alt="Title" />
-					</div>
-				</div>
-				
-				<!-- portfolio item -->
-				<div class="col-md-4 col-sm-12 grid-item creative design">
-					<a href="#sos-calculator" class="work-content">
-						<div class="portfolio-item rounded shadow-dark">
-							<div class="details">
-								<span class="term">Name Meaning</span>
-								<h4 class="title">
-									Find out the meaning of your name
-                                                                     <br> <br> <a href="https://jayashrsy.github.io/namemeaning/" target="_blank"> View</a>           
-								</h4>
-							</div>
-							<div class="thumb">
-								<img src="images/namemeaning.png" alt="Portfolio-title" />
-								<div class="mask"></div>
-							</div>
-						</div>
-					</a>
-					<div id="sos-calculator" class="white-popup zoom-anim-dialog mfp-hide">
-						<img src="images/calculator.jpg" alt="Title" />
-					</div>
-				</div>
-				
-				<!-- portfolio item -->
-				<div class="col-md-4 col-sm-12 grid-item creative design">
-					<a href="#sos-calculator" class="work-content">
-						<div class="portfolio-item rounded shadow-dark">
-							<div class="details">
-								<span class="term">Word Counter</span>
-								<h4 class="title">
-									Count the number of words typed in the box by user
-                                                                     <br> <br> <a href="https://jayashrsy.github.io/wordcounter/" target="_blank"> View</a>           
-								</h4>
-							</div>
-							<div class="thumb">
-								<img src="images/wordcounter.png" alt="Portfolio-title" />
-								<div class="mask"></div>
-							</div>
-						</div>
-					</a>
-					<div id="sos-calculator" class="white-popup zoom-anim-dialog mfp-hide">
-						<img src="images/wordcounter.png" alt="Title" />
-					</div>
-				</div>
-				
-				
-				
-
-			</div>
-
-
-		</div>
-
-	</section>
-
-	
-	
-	
-	
-	
-	<!-- section contact -->
-	<section id="contact">
-
-		<div class="container">
-			
-			<!-- section title -->
-			<h2 class="section-title wow fadeInUp">Get In Touch</h2>
-
-			<div class="spacer" data-height="60"></div>
-			
-			<div class="row">
-				
-				<div class="col-md-12">
-					<!-- contact info -->
-					<div class="contact-info">
-						<h3 class="wow fadeInUp">Don't be a Stranger, Just say HELLO!</h3>
-						<div class="spacer" data-height="20"></div>
-						<div class="row">
-							<div class="col-md-2">
-								<b class="wow fadeInUp">Contact no: </b>
-							</div>
-							<div class="col-md-10">
-								<u class="wow fadeInUp"><a href="tel:+918077151158"> +918077151158</a></u>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-md-2">
-								<b class="wow fadeInUp">Email: </b>
-							</div>
-							<div class="col-md-10">
-								<u class="wow fadeInUp"><a href="mailto: jayashrsy@gmail.com"> jayashrsy@gmail.com</a></u>
-							</div>
-						</div>
-						<ul class="social-icons light list-inline mb-0 mt-4">
-							<li class="list-inline-item"><a target="_blank" href="https://www.linkedin.com/in/jayash-rsy-6482a01b0"><i class="fab fa-linkedin"></i></a></li>
-							
-							<li class="list-inline-item"><a target="_blank" href="https://github.com/JayashRSY"><i class="fab fa-github"></i></a></li>
-                                                        <li class="list-inline-item"><a target="_blank" href="https://www.instagram.com/jayashrsy/"><i class="fab fa-instagram"></i></a></li>
-			
-						</ul>
-						<div class="spacer" data-height="20"></div>
-						<a href="mailto:jayashrsy@gmail.com">
-							<button type="button" name="submit" id="submit" value="Submit" class="btn btn-default">Say Hi!</button><!-- Send Button -->
-						</a>
-						
-					</div>
-				</div>
-
-			</div>
-
-		</div>
-	</section>
-
-        <div class="spacer" data-height="96"></div>
-
- <div><center>&#169; JAYASH</center></div>
-	
-</main>
-
-<!-- Go to top button -->
-<a href="javascript:" id="return-to-top"><i class="fas fa-arrow-up"></i></a>
-
-<!-- SCRIPTS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
-<script src="js/jquery-1.12.3.min.js"></script>
-<script src="js/jquery.easing.min.js"></script>
-<script src="js/jquery.waypoints.min.js"></script>
-<script src="js/jquery.counterup.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/isotope.pkgd.min.js"></script>
-<script src="js/infinite-scroll.min.js"></script>
-<script src="js/imagesloaded.pkgd.min.js"></script>
-<script src="js/slick.min.js"></script>
-<script src="js/contact.js"></script>
-<script src="js/validator.js"></script>
-<script src="js/wow.min.js"></script>
-<script src="js/morphext.min.js"></script>
-<script src="js/parallax.min.js"></script>
-<script src="js/jquery.magnific-popup.min.js"></script>
-<script src="js/custom.js"></script>
-
+    <!--contains all the div-->
+    <div id="all">
+        <!--mouse  follower-->
+        <div class="cursor"></div>
+        <!--mouse  follower-->
+        <!--loader-->
+        <div id="loader">
+            <span class="color">Jayash</span>Yadav
+        </div>
+        <!--loader-end-->
+        <!--link-screen-->
+        <div id="breaker">
+        </div>
+        <div id="breaker-two">
+        </div>
+        <!--link-screen-->
+        <!--Main-Section-->
+        <!--Navigator-fullscreen-->
+        <div id="navigation-content">
+            <div class="logo">
+                <img src="images/willy wonka logo.png"
+                    alt="logo">
+                <embed src="/assets/audio/pusheen.mp3"
+                    loop="true"
+                    autostart="true"
+                    width="200"
+                    height="20">
+            </div>
+            <div class="navigation-close">
+                <span class="close-first"></span>
+                <span class="close-second"></span>
+            </div>
+            <div class="navigation-links">
+                <a href="#"
+                    data-text="HOME"
+                    id="home-link">HOME</a>
+                <a href="#"
+                    data-text="ABOUT"
+                    id="about-link">ABOUT</a>
+                <a href="#"
+                    data-text="BLOG"
+                    id="blog-link">BLOG</a>
+                <a href="#"
+                    data-text="PORTFOLIO"
+                    id="portfolio-link">PORTFOLIO</a>
+                <a href="#"
+                    data-text="CONTACT"
+                    id="contact-link">CONTACT</a>
+            </div>
+        </div>
+        <!--Navigator-Fullscreen END-->
+        <!--Home Page-->
+        <!--Menubar-->
+        <div id="navigation-bar">
+            <img src="images/willy wonka logo.png"
+                alt="logo">
+            <div class="menubar">
+                <span class="first-span"></span>
+                <span class="second-span"></span>
+                <span class="third-span"></span>
+            </div>
+        </div>
+        <!--Menubar End-->
+        <!--Header-->
+        <div id="header">
+            <div id="particles"></div>
+            <!--Social Media Links-->
+            <div class="social-media-links">
+                <a href="https://www.linkedin.com/in/jayashrsy/"><img src="images/icons/linkedin.svg"
+                        class="social-media"
+                        alt="linkedin-logo"></a>
+                <a href="https://www.github.com/jayashrsy/"><img src="images/icons/github.svg"
+                        class="social-media"
+                        alt="facebook-logo"></a>
+                <a href="https://www.instagram.com/jayashrsy/"><img src="images/icons/instagram.svg"
+                        class="social-media"
+                        alt="instagram-logo"></a><!--Your instagram homepage link inser in place of "#"-->
+                <a href="https://www.twitter.com/jayashrsy/"><img src="images/icons/twitter.svg"
+                        class="social-media"
+                        alt="twitter-logo"></a>
+                <a href="https://discordapp.com/users/487901373736681476"><img src="images/icons/discord.svg"
+                        class="social-media"
+                        alt="discord-logo"></a>
+                <a href="https://www.reddit.com/user/JohnRakon"><img src="images/icons/reddit.svg"
+                        class="social-media"
+                        alt="reddit-logo"></a>
+                <a href="https://www.behance.net/johnrakon"><img src="images/icons/behance.svg"
+                        class="social-media"
+                        alt="behance-logo"></a>
+                <a href="https://open.spotify.com/user/h2loukykgejif077u3py70qub"><img src="images/icons/spotify.svg"
+                        class="social-media"
+                        alt="spotify-logo"></a>
+            </div>
+            <!--Social Media Links end-->
+            <div class="header-content">
+                <div class="header-content-box">
+                    <div class="firstline"><span class="color">Jayash </span>Yadav</div>
+                    <div class="secondline">
+                        I'm a
+                        <span class="txt-rotate color"
+                            data-period="1200"
+                            data-rotate='[ " Web Developer.", " Graphic Designer", " Freelancer." ]'></span>
+                        <span class="slash">|</span>
+                    </div>
+                    <div class="contact">
+                        <a href="Mailto:jayash.work@gmail.com"><img src="images/mail.png"
+                                alt="email-pic"
+                                class="contactpic"></a><!--Your email Id write in place of "#"-->
+                        <a href="Tel:+918077151158"><img src="images/call.png"
+                                alt="phone-pic"
+                                class="contactpic"></a><!--Your telephone number Id write in place of "#"-->
+                    </div>
+                </div>
+            </div>
+            <!--header image-->
+            <div class="header-image">
+                <img src="images/my-pro-pic2.png"
+                    alt="logo">
+            </div>
+            <!--header image end-->
+        </div>
+        <!--Header End-->
+        <!--HomePage End-->
+        <!--Main-Section End-->
+        <!--about-->
+        <div id="about">
+            <!-- <div class="color-changer">
+                <div class="color-panel">
+                    <img src="images/gear.png"
+                        alt="">
+                </div>
+                <div class="color-selector">
+                    <div class="heading">Custom Colors</div>
+                    <div class="colors">
+                        <ul>
+                            <li>
+                                <a href="#0"
+                                    class="color-red "
+                                    title="color-red"></a>
+                            </li>
+                            <li>
+                                <a href="#0"
+                                    class="color-purple"
+                                    title="color-purple"></a>
+                            </li>
+                            <li>
+                                <a href="#0"
+                                    class="color-malt"
+                                    title="color-malt"></a>
+                            </li>
+                            <li>
+                                <a href="#0"
+                                    class="color-green"
+                                    title="color-green"></a>
+                            </li>
+                            <li>
+                                <a href="#0"
+                                    class="color-blue"
+                                    title="color-blue"></a>
+                            </li>
+                            <li>
+                                <a href="#0"
+                                    class="color-orange"
+                                    title="color-orange"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div> -->
+            <!--about content-->
+            <div id="about-content">
+                <div class="about-header">
+                    About <span class="color">Me</span>
+                    <span class="header-caption">Get to Know <span class="color"> me.</span></span>
+                </div>
+                <div class="about-main">
+                    <div class="about-first-paragraph wow">
+                        <!--about description-->
+                        <span class="about-first-line">
+                            I'm creative
+                            <span class="color">web developer</span>
+                            based in Shikohabad, India</span>
+                        <br>
+                        <span class="about-second-line"> Passionate about creating beautiful and functional websites, I
+                            am a versatile web developer and designer with a keen eye for detail.</span>
+                        <div class="cv">
+                            <a href="#"><button>Download <span class="colors">CV</span></button></a>
+                        </div>
+                    </div>
+                    <!--about picture-->
+                    <div class="about-img">
+                        <img src="images/my-pro-pic3.jpg"
+                            alt="Your Image">
+                    </div>
+                </div>
+
+            </div>
+            <!--services start-->
+            <div id="services">
+                <!-- <div class="color-changer">
+                    <div class="color-panel">
+                        <img src="images/gear.png"
+                            alt="">
+                    </div>
+                    <div class="color-selector">
+                        <div class="heading">Custom Colors</div>
+                        <div class="colors">
+                            <ul>
+                                <li>
+                                    <a href="#0"
+                                        class="color-red "
+                                        title="color-red"></a>
+                                </li>
+                                <li>
+                                    <a href="#0"
+                                        class="color-purple"
+                                        title="color-purple"></a>
+                                </li>
+                                <li>
+                                    <a href="#0"
+                                        class="color-malt"
+                                        title="color-malt"></a>
+                                </li>
+                                <li>
+                                    <a href="#0"
+                                        class="color-green"
+                                        title="color-green"></a>
+                                </li>
+                                <li>
+                                    <a href="#0"
+                                        class="color-blue"
+                                        title="color-blue"></a>
+                                </li>
+                                <li>
+                                    <a href="#0"
+                                        class="color-orange"
+                                        title="color-orange"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> -->
+                <!--services header-->
+                <div class="services-heading wow">
+                    <span class="color">My</span> Services
+                </div>
+                <!--services header end-->
+                <!--services content-->
+                <div class="services-content">
+                    <div class="service-one service wow">
+                        <div class="service-img">
+                            <img src="images/bulb.png"
+                                alt="service-one">
+                        </div>
+                        <div class="service-description">
+                            <h2>Web Design</h2>
+                            <p>I offer professional and creative web design services that are tailored to your specific
+                                needs and engages your target audience.</p>
+                        </div>
+                    </div>
+                    <div class="service-two service wow">
+                        <div class="service-img">
+                            <img src="images/coding.png"
+                                alt="service-two">
+                        </div>
+                        <div class="service-description">
+                            <h2>Web Development</h2>
+                            <p>I specialize in building customized web applications that are scalable, secure, and
+                                user-friendly.</p>
+                        </div>
+                    </div>
+                    <div class="service-three service wow">
+                        <div class="service-img">
+                            <img src="images/design.png"
+                                alt="service-three">
+                        </div>
+                        <div class="service-description">
+                            <h2>Graphic Design</h2>
+                            <p>I offer a wide range of graphic design services, including logo design, branding,
+                                brochure design, social media graphics, and more.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--services content end-->
+            <!--services end-->
+            <div id="skills">
+                <div class="skills-header">
+                    My <span class="color"> Skills</span>
+                </div>
+                <div class="skill-set">
+                    <img src="./images/skills/icons8-html-5.svg"
+                        alt=""
+                        class="skill-icon">
+                    <img src="./images/skills/icons8-css3.svg"
+                        alt=""
+                        class="skill-icon">
+                    <img src="./images/skills/icons8-javascript.svg"
+                        alt=""
+                        class="skill-icon">
+                    <img src="./images/skills/icons8-bootstrap.svg"
+                        alt=""
+                        class="skill-icon">
+                    <img src="./images/skills/icons8-angularjs.svg"
+                        alt=""
+                        class="skill-icon">
+                    <img src="./images/skills/icons8-react.svg"
+                        alt=""
+                        class="skill-icon">
+                    <img src="./images/skills/icons8-nodejs.svg"
+                        alt=""
+                        class="skill-icon">
+                    <img src="./images/skills/icons8-mongodb.svg"
+                        alt=""
+                        class="skill-icon">
+                    <img src="./images/skills/icons8-flutter.svg"
+                        alt=""
+                        class="skill-icon">
+                    <img src="./images/skills/icons8-firebase.svg"
+                        alt=""
+                        class="skill-icon">
+                    <img src="./images/skills/icons8-canva-app.svg"
+                        alt=""
+                        class="skill-icon">
+                    <img src="./images/skills/icons8-figma.svg"
+                        alt=""
+                        class="skill-icon">
+                    <img src="./images/skills/icons8-adobe-photoshop.svg"
+                        alt=""
+                        class="skill-icon">
+                </div>
+            </div>
+            <!-- EDUCATION -->
+            <section id="education">
+                <div class="skills-header">
+                    My <span class="color"> Education</span>
+                </div>
+                <div class="education">
+                    <div class="edu-item">
+                        <div class="edu-year">
+                            <img src="./images/icons/grad-cap.png"
+                                alt=""
+                                class="grad-cap" />
+                            2019 - 2023
+                        </div>
+                        <div class="edu-degree">
+                            B.Tech (Hons.) CSE
+                        </div>
+                        <div class="edu-college">
+                            Dr. A.P.J. Abdul Kalam Technical University
+                        </div>
+                    </div>
+                    <div class="edu-item">
+                        <div class="edu-year">
+                            <img src="./images/icons/grad-cap.png"
+                                alt=""
+                                class="grad-cap" />
+                            2018 - 2019
+                        </div>
+                        <div class="edu-degree">
+                            Intermediate - PCM
+                        </div>
+                        <div class="edu-college">
+                            St. Dominic's Academy
+                        </div>
+                    </div>
+                    <div class="edu-item">
+                        <div class="edu-year">
+                            <img src="./images/icons/grad-cap.png"
+                                alt=""
+                                class="grad-cap" />
+                            2016 - 2017
+                        </div>
+                        <div class="edu-degree">
+                            High School
+                        </div>
+                        <div class="edu-college">
+                            St. Dominic's Academy
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+            <!--copyright-section You Can Remove After Downloading-->
+            <div class="footer">
+                <div class="footer-text">
+                    <img src="./images/copyright.png"
+                        alt="copyright-img"
+                        class="images"
+                        height="14px"> Jayash Yadav
+                </div>
+            </div>
+            <!--copyright-section-->
+        </div>
+        <!--about end-->
+        <!--portfolio-->
+        <div id="portfolio">
+            <!-- <div class="color-changer">
+                <div class="color-panel">
+                    <img src="images/gear.png"
+                        alt="">
+                </div>
+                <div class="color-selector">
+                    <div class="heading">Custom Colors</div>
+                    <div class="colors">
+                        <ul>
+                            <li>
+                                <a href="#0"
+                                    class="color-red "
+                                    title="color-red"></a>
+                            </li>
+                            <li>
+                                <a href="#0"
+                                    class="color-purple"
+                                    title="color-purple"></a>
+                            </li>
+                            <li>
+                                <a href="#0"
+                                    class="color-malt"
+                                    title="color-malt"></a>
+                            </li>
+                            <li>
+                                <a href="#0"
+                                    class="color-green"
+                                    title="color-green"></a>
+                            </li>
+                            <li>
+                                <a href="#0"
+                                    class="color-blue"
+                                    title="color-blue"></a>
+                            </li>
+                            <li>
+                                <a href="#0"
+                                    class="color-orange"
+                                    title="color-orange"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div> -->
+            <div class="portfolio-header"> <span class="color"> My </span> Portfolio
+                <span class="header-caption"> Some Of My <span class="color"> Works</span></span>
+            </div>
+            <div id="portfolio-content">
+                <div class="portfolio portfolio-first">
+                    <div class="portfolio-image">
+                        <img src="images/portfolio-first.jpg"
+                            alt="portfolio-first">
+                    </div>
+                    <div class="portfolio-text">
+                        <h2>App Idea</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad ut optio repellat cupiditate
+                            expedita eius dignissimos. Id cumque placeat minima ad laudantium suscipit voluptatem
+                            ducimus</p>
+                        <div class="button"><a href="#"><button><span class="index"> View Project<i
+                                            class="gg-arrow-right"></i></span></button></a></div>
+                    </div>
+                </div>
+                <div class="portfolio portfolio-second">
+                    <div class="portfolio-image">
+                        <img src="images/portfolio-second.jpg"
+                            alt="portfolio-second">
+                    </div>
+                    <div class="portfolio-text">
+                        <h2>Web Designing</h2>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id cumque placeat minima ad
+                            laudantium suscipit
+                            voluptatem ducimus. Id cumque placeat minima ad laudantium suscipit voluptatem ducimus</p>
+                        <div class="button"><a href="#"><button><span class="index"> View Project<i
+                                            class="gg-arrow-right"></i></span></button></a></div>
+                    </div>
+                </div>
+
+                <div class="portfolio portfolio-third">
+                    <div class="portfolio-image">
+                        <img src="images/portfolio-third.jpg"
+                            alt="portfolio-third">
+                    </div>
+                    <div class="portfolio-text">
+                        <h2>UI Designing</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad ut optio repellat cupiditate
+                            expedita eius dignissimos
+                            .. Id cumque placeat minima ad laudantium suscipit voluptatem ducimus</p>
+                        <div class="button"><a href="#"><button><span class="index"> View Project<i
+                                            class="gg-arrow-right"></i></span></button></a></div>
+                    </div>
+                </div>
+                <div class="portfolio portfolio-fourth">
+                    <div class=" portfolio-image">
+                        <img src="images/portfolio-fourth.jpg"
+                            alt="portfolio-fourth">
+                    </div>
+                    <div class="portfolio-text">
+                        <h2>Wow Graphics</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad ut optio repellat cupiditate
+                            expedita eius dignissimos. Id cumque placeat minima ad laudantium suscipit voluptatem
+                            ducimus</p>
+                        <div class="button"><a href="#"><button><span class="index"> View Project<i
+                                            class="gg-arrow-right"></i></span></button></a></div>
+                    </div>
+                </div>
+            </div>
+            <!--copyright-section You Can Remove After Downloading-->
+            <div class="footer">
+                <div class="footer-text">
+                    <img src="./images/copyright.png"
+                        alt="copyright-img"
+                        class="images"
+                        height="14px"> Jayash Yadav
+                </div>
+            </div>
+            <!--copyright-section-->
+        </div>
+        <!--portfolio end-->
+        <!--blog-->
+        <div id="blog">
+            <!-- <div class="color-changer">
+                <div class="color-panel">
+                    <img src="images/gear.png"
+                        alt="">
+                </div>
+                <div class="color-selector">
+                    <div class="heading">Custom Colors</div>
+                    <div class="colors">
+                        <ul>
+                            <li>
+                                <a href="#0"
+                                    class="color-red "
+                                    title="color-red"></a>
+                            </li>
+                            <li>
+                                <a href="#0"
+                                    class="color-purple"
+                                    title="color-purple"></a>
+                            </li>
+                            <li>
+                                <a href="#0"
+                                    class="color-malt"
+                                    title="color-malt"></a>
+                            </li>
+                            <li>
+                                <a href="#0"
+                                    class="color-green"
+                                    title="color-green"></a>
+                            </li>
+                            <li>
+                                <a href="#0"
+                                    class="color-blue"
+                                    title="color-blue"></a>
+                            </li>
+                            <li>
+                                <a href="#0"
+                                    class="color-orange"
+                                    title="color-orange"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div> -->
+            <div class="blog-header"> Blogs
+                <span class="header-caption"> My Latest <span class="color"> blog posts.</span></span>
+            </div>
+            <div id="certificate-container"></div>
+            <div class="blog-content">
+                <div class="blogs">
+                    <a href="#">
+                        <div class="img">
+                            <img src="images/post-one.jpg"
+                                alt="blog-one">
+                            <div class="blog-date">8 May,20</div>
+                        </div>
+                        <div class="blog-text">
+                            <h3>Harleys In Hawaai</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus alias dolore recusandae
+                                illum, corrupti quo
+                                veniam saepe aliquid! Quis voluptates ratione consequuntur vel, perferendis cum
+                                provident? Magnam fugiat voluptas
+                                libero.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="blogs">
+                    <a href="#">
+                        <div class="img">
+                            <img src="images/post-two.jpg"
+                                alt="blog-two">
+                            <div class="blog-date">16 Jan,20</div>
+                        </div>
+                        <div class="blog-text">
+                            <h3>Key To Be Productive</h3>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt maiores,
+                                recusandae cupiditate ducimus a non tempora, architecto obcaecati eaque ipsum assumenda
+                                harum dolorum iusto tenetur
+                                eius eligendi dolor magnam sit!</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="blogs">
+                    <a href="#">
+                        <div class="img">
+                            <img src="images/post-three.jpg"
+                                alt="blog-three">
+                            <div class="blog-date">30 Nov,19</div>
+                        </div>
+                        <div class="blog-text">
+                            <h3>Caffeine Addict</h3>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo nostrum impedit
+                                ipsam perspiciatis ratione sapiente quasi optio reprehenderit, labore consequuntur
+                                suscipit cum quas.
+                                Officiis dolorem asperiores, ut necessitatibus quas doloremque?</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="blogs">
+                    <a href="#">
+                        <div class="img">
+                            <img src="images/post-four.jpg"
+                                alt="blog-four">
+                            <div class="blog-date">6 Jul,19</div>
+                        </div>
+                        <div class="blog-text">
+                            <h3>Web Development</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, veniam ratione quam
+                                vitae,
+                                quibusdam explicabo rem debitis velit ipsa repellat, impedit nulla fuga? Amet corporis
+                                praesentium quae.
+                                Sed, quibusdam necessitatibus.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="blogs">
+                    <a href="#">
+                        <div class="img">
+                            <img src="images/post-five.jpg"
+                                alt="blog-five">
+                            <div class="blog-date">1 Jun,19</div>
+                        </div>
+                        <div class="blog-text">
+                            <h3>Work From Home</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga sunt eum necessitatibus rem
+                                dignissimos nulla mollitia cumque, provident officiis non vitae? Animi aut doloremque
+                                illum, soluta hic minus
+                                sint explicabo..</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="blogs">
+                    <a href="#">
+                        <div class="img">
+                            <img src="images/post-six.jpg"
+                                alt="blog-six">
+                            <div class="blog-date">28 Feb,19</div>
+                        </div>
+                        <div class="blog-text">
+                            <h3>Business Trip</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo tempora dolorum fuga
+                                ratione, unde,
+                                ex quaerat iste numquam nemo nihil nobis rem sint quia recusandae dignissimos quos ut
+                                rerum nam.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!--copyright-section You Can Remove After Downloading-->
+            <div class="footer">
+                <div class="footer-text">
+                    <img src="./images/copyright.png"
+                        alt="copyright-img"
+                        class="images"
+                        height="14px"> Jayash Yadav
+                </div>
+            </div>
+            <!--copyright-section-->
+        </div>
+        <!--blog end-->
+        <!--contact-->
+        <div id="contact">
+            <!-- <div class="color-changer">
+                <div class="color-panel">
+                    <img src="images/gear.png"
+                        alt="">
+                </div>
+                <div class="color-selector">
+                    <div class="heading">Custom Colors</div>
+                    <div class="colors">
+                        <ul>
+                            <li>
+                                <a href="#0"
+                                    class="color-red "
+                                    title="color-red"></a>
+                            </li>
+                            <li>
+                                <a href="#0"
+                                    class="color-purple"
+                                    title="color-purple"></a>
+                            </li>
+                            <li>
+                                <a href="#0"
+                                    class="color-malt"
+                                    title="color-malt"></a>
+                            </li>
+                            <li>
+                                <a href="#0"
+                                    class="color-green"
+                                    title="color-green"></a>
+                            </li>
+                            <li>
+                                <a href="#0"
+                                    class="color-blue"
+                                    title="color-blue"></a>
+                            </li>
+                            <li>
+                                <a href="#0"
+                                    class="color-orange"
+                                    title="color-orange"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div> -->
+            <div class="contact-header">Contact <span class="color"> Me</span>
+                <div class="contact-header-caption"> <span class="color"> Get</span> In Touch.</div>
+            </div>
+            <div class="contact-content">
+                <!--Contact form-->
+                <div class="contact-form">
+                    <div class="form-header">
+                        Message Me
+                    </div>
+                    <form id="myForm"
+                        action="#">
+                        <div class="input-line">
+                            <input id="name"
+                                type="text"
+                                placeholder="Name"
+                                class="input-name">
+                            <input id="email"
+                                type="email"
+                                placeholder="Email"
+                                class="input-name">
+                        </div>
+                        <input type="text"
+                            id="subject"
+                            placeholder="subject"
+                            class="input-subject">
+                        <textarea id="body"
+                            class="input-textarea"
+                            placeholder="message"></textarea>
+                        <button type="button"
+                            id="submit"
+                            value="send">Submit</button>
+                    </form>
+
+                </div>
+                <!--Contact form-->
+                <!--Contact information-->
+                <div class="contact-info">
+                    <div class="contact-info-header">
+                        Contact Info
+                    </div>
+                    <div class="contact-info-content">
+                        <div class="contect-info-content-line">
+                            <img src="./images/icon-name.png"
+                                class="icon"
+                                alt="name-icon">
+                            <div class="contact-info-icon-text">
+                                <h6>Name</h6>
+                                <p>Jayash Yadav</p>
+                            </div>
+                        </div>
+                        <div class="contect-info-content-line">
+                            <img src="./images/icon-location.png"
+                                class="icon"
+                                alt="location-icon">
+                            <div class="contact-info-icon-text">
+                                <h6>Location</h6>
+                                <p>Shikohabad, India</p>
+                            </div>
+                        </div>
+                        <div class="contect-info-content-line">
+                            <img src="./images/icon-phone.png"
+                                class="icon"
+                                alt="phone-icon">
+                            <div class="contact-info-icon-text">
+                                <h6>Call</h6>
+                                <p>+918077151158</p>
+                            </div>
+                        </div>
+
+                        <div class="contect-info-content-line">
+                            <img src="./images/icon-email.png"
+                                class="icon"
+                                alt="email-icon">
+                            <div class="contact-info-icon-text">
+                                <h6>Email</h6>
+                                <p>jayash.work@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Contact information end-->
+                </div>
+            </div>
+            <!--copyright-section You Can Remove After Downloading-->
+            <div class="footer">
+                <div class="footer-text">
+                    <img src="./images/copyright.png"
+                        alt="copyright-img"
+                        class="images"
+                        height="14px"> Jayash Yadav
+                </div>
+            </div>
+            <!--copyright-section-->
+        </div>
+        <!--contact end-->
+    </div>
+    <!--all the divisions-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/particles.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/certificates.js"></script>
+    <!--particles script-->
+    <script>
+        particlesJS("particles", { "particles": { "number": { "value": 120, "density": { "enable": true, "value_area": 800 } }, "color": { "value": "#ffffff" }, "shape": { "type": "circle", "stroke": { "width": 0, "color": "#000000" }, "polygon": { "nb_sides": 5 }, "image": { "src": "img/github.svg", "width": 100, "height": 100 } }, "opacity": { "value": 0.5, "random": false, "anim": { "enable": true, "speed": 1, "opacity_min": 0.1, "sync": false } }, "size": { "value": 3, "random": true, "anim": { "enable": true, "speed": 0, "size_min": 0.1, "sync": false } }, "line_linked": { "enable": false, "distance": 0, "color": "#ffffff", "opacity": 0.24463576890600452, "width": 1.2626362266116362 }, "move": { "enable": true, "speed": 3, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false, "attract": { "enable": false, "rotateX": 600, "rotateY": 1200 } } }, "interactivity": { "detect_on": "canvas", "events": { "onhover": { "enable": false, "mode": "grab" }, "onclick": { "enable": true, "mode": "push" }, "resize": true }, "modes": { "grab": { "distance": 400, "line_linked": { "opacity": 1 } }, "bubble": { "distance": 400, "size": 40, "duration": 2, "opacity": 8, "speed": 3 }, "repulse": { "distance": 200, "duration": 0.4 }, "push": { "particles_nb": 4 }, "remove": { "particles_nb": 2 } } }, "retina_detect": true });
+    </script>
 </body>
+
 </html>
