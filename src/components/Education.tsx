@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 // import me from "../assets/img/me.png";
 import { educationData } from "../assets/lib/data";
 // import { Autoplay, Pagination, Navigation } from "swiper/modules";
-// import { Swiper, SwiperSlide } from "swiper/react";
+import { SwiperSlide } from "swiper/react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -81,7 +81,7 @@ const Education: React.FC = () => {
             bg-[--darkblue] text-[--white] flex flex-col justify-center items-start gap-24 rounded-2xl p-20 border-solid border-[0.4rem] border-[--lightblue] hover:border-orange duration-500 transition-all text-left max-lg:p-10 cursor-grab"
           >
             {paragraphs.map((paragraph, index) => (
-              <div
+              <SwiperSlide
                 className="bg-[--darkblue] text-[--white] flex flex-col justify-center items-start gap-24 rounded-2xl p-20 border-solid border-[0.4rem] border-[--lightblue] hover:border-orange duration-500 transition-all text-left max-lg:p-10 cursor-grab"
                 key={index}
               >
@@ -120,7 +120,7 @@ const Education: React.FC = () => {
                     <p className="text-white text-2xl mt-2">{paragraph.institute}</p>
                   </div>
                 </div>
-              </div>
+              </SwiperSlide>
             ))}
             {/* <div
               className="autoplay-progress absolute right-0 bottom-0 z-10 flex items-center justify-center font-bold text-orange text-4xl w-24 h-24 max-lg:w-16 max-lg:h-16 max-lg:text-3xl "
