@@ -11,19 +11,25 @@ import tailwindcssicon from "../../assets/icons/tailwindicon.svg";
 import mongodbicon from "../../assets/icons/mongoicon.svg";
 import expressicon from "../../assets/icons/expressicon.svg";
 import sassscssicon from "../../assets/icons/sassicon.svg";
-import trelloicon from "../../assets/icons/trelloicon.svg";
+// import trelloicon from "../../assets/icons/trelloicon.svg";
 import apiicon from "../../assets/icons/apiicon.svg";
-import axiosicon from "../../assets/icons/axiosicon.svg";
-import spotifyicon from "../../assets/icons/spotifyicon.svg";
+// import axiosicon from "../../assets/icons/axiosicon.svg";
+// import spotifyicon from "../../assets/icons/spotifyicon.svg";
 import netlifyicon from "../../assets/icons/netlifyicon.svg";
-import rendericon from "../../assets/icons/rendericon.svg";
+// import rendericon from "../../assets/icons/rendericon.svg";
 import jwticon from "../../assets/icons/jwticon.svg";
 import wordpressicon from "../../assets/icons/wordpressicon.svg";
 import shopifyicon from "../../assets/icons/shopifyicon.svg";
 import webflowicon from "../../assets/icons/webflowicon.svg";
-import tastyMockup from "../../assets/img/tasty_mockup.webp";
-import instorMockup from "../../assets/img/instor_mockup.webp";
-import silentmoonMockup from "../../assets/img/silentmoon_mockup.webp";
+// import tastyMockup from "../../assets/img/tasty_mockup.webp";
+import taskMockup from "../../assets/img/projects/task-tracker.png";
+import kanbanMockup from "../../assets/img/projects/kanban.png";
+import diceMockup from "../../assets/img/projects/dice-game.png";
+import codingMockup from "../../assets/img/projects/compiler.png";
+import cityMockup from "../../assets/img/projects/city-search.png";
+import gitUserMockup from "../../assets/img/projects/github-finder.png";
+// import instorMockup from "../../assets/img/instor_mockup.webp";
+// import silentmoonMockup from "../../assets/img/silentmoon_mockup.webp";
 import profilepicture from "../img/me2.png";
 import caricon from "../../assets/icons/car-icon.svg";
 import travelicon from "../../assets/icons/travel-icon.svg";
@@ -31,7 +37,14 @@ import hardwareicon from "../../assets/icons/hardware-icon.svg";
 import expressiconwhite from "../../assets/icons/expressiconwhite.svg";
 import angularicon from "../../assets/icons/icons8-angular-100.png";
 import awsicon from "../../assets/icons/icons8-amazon-web-services-100.png";
-import { GoHome, GoPerson, GoMail, GoStack, GoProject } from "react-icons/go";
+import {
+  GoHome,
+  GoPerson,
+  GoMail,
+  GoStack,
+  GoProject,
+  GoPaperclip,
+} from "react-icons/go";
 import {
   FiGithub,
   FiLink,
@@ -78,25 +91,24 @@ export const headerIntroData = {
 
 export const projectsData = [
   {
-    title: "Tasty App",
+    title: "Task Tracker",
     description:
-      "Eine Rezepte App, die wir als Team mit React und der MealDB API gebaut haben. Ich war der Front-End Entwickler und habe Features wie Voice Search oder Print to PDF programmiert. Das Design wurde mit Figma erstellt. Die Website ist responsive und mobile-optimiert.",
+      "Full Stack Task Tracker app, offering intuitive user interface and comprehensive features for efficient task tracking and collaboration.",
     description_EN:
-      "A recipe app that we built as a team with React and the MealDB API. I was the front-end developer and programmed features like voice search or print to PDF. The design was created with Figma. The website is responsive and mobile-optimized.",
+      "Full Stack Task Tracker app, offering intuitive user interface and comprehensive features for efficient task tracking and collaboration.",
     technologies: [
       { name: "Html", icon: htmlicon },
       { name: "CSS", icon: cssicon },
       { name: "JavaScript", icon: javascripticon },
       { name: "REST Api", icon: apiicon },
-      { name: "React", icon: reacticon },
-      { name: "Figma", icon: figmaicon },
-      { name: "Canva", icon: canvaicon },
+      { name: "JWT", icon: jwticon },
+      { name: "Angular", icon: angularicon },
+      { name: "Node.js", icon: nodejsicon },
       { name: "Netlify", icon: netlifyicon },
-      { name: "Trello", icon: trelloicon },
     ],
-    image: tastyMockup,
-    deploymenturl: "https://delightful-cheesecake-9b19f0.netlify.app/",
-    githuburl: "https://github.com/JayashRSY/Frontend_Abschlussprojekt_Tasty",
+    image: taskMockup,
+    deploymenturl: "https://task-tracker-fe-mu.vercel.app/",
+    githuburl: "https://github.com/JayashRSY/task-tracker-fe",
     githubicon: FiGithub,
     deploymenticon: FiLink,
     colors: {
@@ -107,29 +119,20 @@ export const projectsData = [
     },
   },
   {
-    title: "Silentmoon",
+    title: "Kanban Board",
     description:
-      "Eine Yoga und Meditations App, die wir als Team mit React, MongoDB, Express und Node.js gebaut haben. Meine Aufgabe als Gitmaster und Backend Entwickler bestand darin, das Backend mit Anbindung anhand einer Restful API zu programmieren und die Datenbank in MongoDB zu modellieren.",
+      "Effortlessly manage tasks with our Kanban Board project, providing a visual workflow for organizing tasks, enhancing productivity, and fostering team collaboration.",
     description_EN:
-      "A yoga and meditation app that we built as a team with React, MongoDB, Express and Node.js. My task as a gitmaster and backend developer was to program the backend with connection using a restful API and to model the database in MongoDB.",
+      "Effortlessly manage tasks with our Kanban Board project, providing a visual workflow for organizing tasks, enhancing productivity, and fostering team collaboration.",
     technologies: [
       { name: "Html", icon: htmlicon },
       { name: "CSS", icon: cssicon },
       { name: "JavaScript", icon: javascripticon },
-      { name: "Spotify Api", icon: spotifyicon },
-      { name: "React", icon: reacticon },
-      { name: "JWT & Bcrypt", icon: jwticon },
-      { name: "Axios", icon: axiosicon },
-      { name: "MongoDB", icon: mongodbicon },
-      { name: "Express", icon: expressiconwhite },
-      { name: "Node.js", icon: nodejsicon },
-      { name: "Figma", icon: figmaicon },
-      { name: "Render", icon: rendericon },
+      { name: "Netlify", icon: netlifyicon },
     ],
-    image: silentmoonMockup,
-    deploymenturl: "https://silentmoon-grpw.onrender.com/",
-    githuburl:
-      "https://github.com/JayashRSY/Fullstack_Abschlussprojekt_SilentMoon",
+    image: kanbanMockup,
+    deploymenturl: "https://github.com/JayashRSY/task-tracker-fe",
+    githuburl: "https://github.com/JayashRSY/kanban-board",
     githubicon: FiGithub,
     deploymenticon: FiLink,
     colors: {
@@ -140,28 +143,89 @@ export const projectsData = [
     },
   },
   {
-    title: "Furniture Organizer",
+    title: "Coding Go",
     description:
-      "Eine Möbel-Organizer App, die wir als Duo-Team mit React, MongoDB, Express und Node.js programmiert haben. Als Gitmaster habe ich die Verknüpfung des Frontends mit dem Backend und die Datenbankmodellierung übernommen. Die App ist responsive und mobile-optimiert.",
+      "Empower coding on-the-go with our web-based responsive compiler project, enabling developers to write, compile, and test code across devices with ease and efficiency.",
     description_EN:
-      "A furniture organizer app that we programmed as a duo team with React, MongoDB, Express and Node.js. As a gitmaster, I took over the connection of the frontend to the backend and the database modeling. The app is responsive and mobile-optimized.",
+      "Empower coding on-the-go with our web-based responsive compiler project, enabling developers to write, compile, and test code across devices with ease and efficiency.",
     technologies: [
       { name: "Html", icon: htmlicon },
       { name: "CSS", icon: cssicon },
       { name: "JavaScript", icon: javascripticon },
-      { name: "React", icon: reacticon },
-      { name: "JWT & Bcrypt", icon: jwticon },
-      { name: "Axios", icon: axiosicon },
-      { name: "MongoDB", icon: mongodbicon },
-      { name: "Express", icon: expressiconwhite },
-      { name: "Node.js", icon: nodejsicon },
-      { name: "Figma", icon: figmaicon },
-      { name: "Render", icon: rendericon },
-      { name: "Trello", icon: trelloicon },
+      { name: "REST Api", icon: apiicon },
     ],
-    image: instorMockup,
-    deploymenturl: "https://mern-haushaltsbuch.onrender.com/",
-    githuburl: "https://github.com/JayashRSY/Furniture_MERN",
+    image: codingMockup,
+    deploymenturl: "https://coding-go.netlify.app/compiler",
+    githuburl: "https://github.com/JayashRSY/codingo",
+    githubicon: FiGithub,
+    deploymenticon: FiLink,
+    colors: {
+      main: "main-btn",
+      second: "secondary-btn",
+      icon: "white",
+      projectcolor: "#E3964A",
+    },
+  },
+  {
+    title: "Dice Game",
+    description:
+      "Engage in thrilling gameplay with our 2-player dice game project, offering interactive fun and strategic challenges for players of all ages.",
+    description_EN:
+      "Engage in thrilling gameplay with our 2-player dice game project, offering interactive fun and strategic challenges for players of all ages.",
+    technologies: [
+      { name: "Html", icon: htmlicon },
+      { name: "CSS", icon: cssicon },
+      { name: "JavaScript", icon: javascripticon },
+    ],
+    image: diceMockup,
+    deploymenturl: "https://rollmydice.netlify.app/",
+    githuburl: "https://github.com/JayashRSY/dice-game",
+    githubicon: FiGithub,
+    deploymenticon: FiLink,
+    colors: {
+      main: "main-btn",
+      second: "secondary-btn",
+      icon: "white",
+      projectcolor: "#E3964A",
+    },
+  },
+  {
+    title: "City Search",
+    description:
+      "Explore cities effortlessly with our Smart City Search project, featuring a simple yet powerful autocomplete function for seamless navigation and discovery.",
+    description_EN:
+      "Explore cities effortlessly with our Smart City Search project, featuring a simple yet powerful autocomplete function for seamless navigation and discovery.",
+    technologies: [
+      { name: "Html", icon: htmlicon },
+      { name: "CSS", icon: cssicon },
+      { name: "JavaScript", icon: javascripticon },
+    ],
+    image: cityMockup,
+    deploymenturl: "https://smartcitysearch.netlify.app/",
+    githuburl: "https://github.com/JayashRSY/city-smart-search",
+    githubicon: FiGithub,
+    deploymenticon: FiLink,
+    colors: {
+      main: "main-btn",
+      second: "secondary-btn",
+      icon: "white",
+      projectcolor: "#E3964A",
+    },
+  },
+  {
+    title: "Github User Finder",
+    description:
+      "Easily discover GitHub users with our user finder project, providing a streamlined search experience to locate developers and explore their profiles quickly.",
+    description_EN:
+      "Easily discover GitHub users with our user finder project, providing a streamlined search experience to locate developers and explore their profiles quickly.",
+    technologies: [
+      { name: "Html", icon: htmlicon },
+      { name: "CSS", icon: cssicon },
+      { name: "JavaScript", icon: javascripticon },
+    ],
+    image: gitUserMockup,
+    deploymenturl: "https://githubuserfinder.vercel.app/",
+    githuburl: "https://github.com/JayashRSY/fyle-internship-challenge-23",
     githubicon: FiGithub,
     deploymenticon: FiLink,
     colors: {
@@ -318,7 +382,7 @@ export const navLinks = [
   { de: "Home", en: "Home", hash: "#home", icon: GoHome },
   { de: "Skills", en: "Skills", hash: "#skills", icon: GoStack },
   { de: "Projekte", en: "Projects", hash: "#projects", icon: GoProject },
-  { de: "Bildung", en: "Education", hash: "#education", icon: GoPerson },
+  { de: "Bildung", en: "Education", hash: "#education", icon: GoPaperclip },
   { de: "Über mich", en: "About me", hash: "#about-me", icon: GoPerson },
   { de: "Kontakt", en: "Contact", hash: "#contact", icon: GoMail },
 ] as const;
