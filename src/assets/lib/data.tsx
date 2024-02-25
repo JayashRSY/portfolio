@@ -131,7 +131,7 @@ export const projectsData = [
       { name: "Netlify", icon: netlifyicon },
     ],
     image: kanbanMockup,
-    deploymenturl: "https://github.com/JayashRSY/task-tracker-fe",
+    deploymenturl: "https://jrsy-kanban-board.netlify.app/",
     githuburl: "https://github.com/JayashRSY/kanban-board",
     githubicon: FiGithub,
     deploymenticon: FiLink,
@@ -466,19 +466,19 @@ export const aboutMeData = {
     {
       title: "The Circuits of My Heart",
       description:
-        "When I'm not navigating the digital world, I explore the fascinating realm of technology and hardware. Circuits and solder joints are like puzzle pieces to me in an exciting adventure.",
+        "Tech enthusiast by day, digital explorer by night—I'm the fearless adventurer navigating the ever-evolving landscape of technology, where every new gadget is a treasure waiting to be discovered",
       icon: hardwareicon,
     },
     {
       title: "On the Fast Lane of Life",
       description:
-        "Besides coding, I like to be on the fast lane - in the truest sense of the word. Cars are my passion, and I enjoy being on unknown roads with powerful machines.",
+        "Besides coding, I like gaming. In the realm of gaming, I'm not just a player—I'm the hero of countless digital adventures, where every victory is a triumph and every defeat a lesson in resilience and determination.",
       icon: caricon,
     },
     {
       title: "The Joy of Discovery as a Life Motto",
       description:
-        "My journey as a web developer is only a part of my life path. I live by the motto that the adventure only begins when you leave the familiar behind. Discovering new places and cultures is my form of creative inspiration.",
+        "My journey as a web developer is only a part of my life path. I live by the motto that the adventure only begins when you leave the familiar behind. Discovering new hobbies and self improvement is my form of creative inspiration.",
       icon: travelicon,
     },
   ],
