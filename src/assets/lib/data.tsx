@@ -23,6 +23,8 @@ import shopifyicon from "../../assets/icons/shopifyicon.svg";
 import webflowicon from "../../assets/icons/webflowicon.svg";
 // import tastyMockup from "../../assets/img/tasty_mockup.webp";
 import taskMockup from "../../assets/img/projects/task-tracker.png";
+import winplayMockup from "../../assets/img/projects/winplay.png";
+import kalabhavanMockup from "../../assets/img/projects/kalabhavan.png";
 import kanbanMockup from "../../assets/img/projects/kanban.png";
 import diceMockup from "../../assets/img/projects/dice-game.png";
 import codingMockup from "../../assets/img/projects/compiler.png";
@@ -91,9 +93,63 @@ export const headerIntroData = {
 
 export const projectsData = [
   {
+    title: "KalaBhavan",
+    description:
+      "Kalabhavan is a dynamic e-commerce platform tailored for artists and administrators to showcase, manage, and sell customized metal posters. The website facilitates user sign-ups, design uploads, and streamlined management of poster designs, providing a vibrant marketplace for art enthusiasts.",
+    description_EN:
+      "Kalabhavan ist eine dynamische E-Commerce-Plattform, die auf Künstler und Administratoren zugeschnitten ist, um maßgeschneiderte Metallposter zu präsentieren, zu verwalten und zu verkaufen. Die Website erleichtert Benutzeranmeldungen, Design-Uploads und eine optimierte Verwaltung von Posterdesigns und bietet einen lebendigen Marktplatz für Kunstliebhaber.",
+    technologies: [
+      { name: "Html", icon: htmlicon },
+      { name: "CSS", icon: cssicon },
+      { name: "JavaScript", icon: javascripticon },
+      { name: "REST Api", icon: apiicon },
+      { name: "JWT", icon: jwticon },
+      { name: "Angular", icon: angularicon },
+      { name: "Node.js", icon: nodejsicon },
+    ],
+    image: kalabhavanMockup,
+    deploymenturl: "https://kalabhavan.vercel.app/",
+    githuburl: "https://github.com/JayashRSY/displate-fe",
+    githubicon: FiGithub,
+    deploymenticon: FiLink,
+    colors: {
+      main: "main-btn",
+      second: "secondary-btn",
+      icon: "white",
+      projectcolor: "#70B9BE",
+    },
+  },
+  {
+    title: "WinPlay",
+    description:
+      "The WinPlay is an engaging real-time betting application developed using the MEAN stack (MongoDB, Express.js, Angular, Node.js) and WebSocket technology. This application allows multiple users to place bets on different colors and view live betting results instantly.",
+    description_EN:
+      "The WinPlay is an engaging real-time betting application developed using the MEAN stack (MongoDB, Express.js, Angular, Node.js) and WebSocket technology. This application allows multiple users to place bets on different colors and view live betting results instantly.",
+    technologies: [
+      { name: "Html", icon: htmlicon },
+      { name: "CSS", icon: cssicon },
+      { name: "JavaScript", icon: javascripticon },
+      { name: "REST Api", icon: apiicon },
+      { name: "JWT", icon: jwticon },
+      { name: "Angular", icon: angularicon },
+      { name: "Node.js", icon: nodejsicon },
+    ],
+    image: winplayMockup,
+    deploymenturl: "https://winplay-fe.vercel.app/",
+    githuburl: "https://github.com/JayashRSY/winplay-fe",
+    githubicon: FiGithub,
+    deploymenticon: FiLink,
+    colors: {
+      main: "main-btn",
+      second: "secondary-btn",
+      icon: "white",
+      projectcolor: "#70B9BE",
+    },
+  },
+  {
     title: "Task Tracker",
     description:
-      "Full Stack Task Tracker app, offering intuitive user interface and comprehensive features for efficient task tracking and collaboration.",
+      "Full Stack Task Tracker-App mit intuitiver Benutzeroberfläche und umfassenden Funktionen für effiziente Aufgabenverfolgung und Zusammenarbeit.",
     description_EN:
       "Full Stack Task Tracker app, offering intuitive user interface and comprehensive features for efficient task tracking and collaboration.",
     technologies: [
@@ -121,7 +177,7 @@ export const projectsData = [
   {
     title: "Kanban Board",
     description:
-      "Effortlessly manage tasks with our Kanban Board project, providing a visual workflow for organizing tasks, enhancing productivity, and fostering team collaboration.",
+      "Verwalten Sie mühelos Aufgaben mit unserem Kanban-Board-Projekt, das einen visuellen Workflow zum Organisieren von Aufgaben, zur Steigerung der Produktivität und zur Förderung der Teamzusammenarbeit bietet.",
     description_EN:
       "Effortlessly manage tasks with our Kanban Board project, providing a visual workflow for organizing tasks, enhancing productivity, and fostering team collaboration.",
     technologies: [
@@ -145,7 +201,7 @@ export const projectsData = [
   {
     title: "Coding Go",
     description:
-      "Empower coding on-the-go with our web-based responsive compiler project, enabling developers to write, compile, and test code across devices with ease and efficiency.",
+      "Ermöglichen Sie das Programmieren unterwegs mit unserem webbasierten, reaktionsschnellen Compiler-Projekt, das es Entwicklern ermöglicht, Code geräteübergreifend einfach und effizient zu schreiben, zu kompilieren und zu testen.",
     description_EN:
       "Empower coding on-the-go with our web-based responsive compiler project, enabling developers to write, compile, and test code across devices with ease and efficiency.",
     technologies: [
@@ -169,7 +225,7 @@ export const projectsData = [
   {
     title: "Dice Game",
     description:
-      "Engage in thrilling gameplay with our 2-player dice game project, offering interactive fun and strategic challenges for players of all ages.",
+      "Erlebe aufregendes Gameplay mit unserem 2-Spieler-Würfelspielprojekt, das interaktiven Spaß und strategische Herausforderungen für Spieler jeden Alters bietet.",
     description_EN:
       "Engage in thrilling gameplay with our 2-player dice game project, offering interactive fun and strategic challenges for players of all ages.",
     technologies: [
@@ -192,7 +248,7 @@ export const projectsData = [
   {
     title: "City Search",
     description:
-      "Explore cities effortlessly with our Smart City Search project, featuring a simple yet powerful autocomplete function for seamless navigation and discovery.",
+      "Erkunden Sie Städte mühelos mit unserem Smart City Search-Projekt, das eine einfache, aber leistungsstarke Autovervollständigungsfunktion für eine nahtlose Navigation und Entdeckung bietet.",
     description_EN:
       "Explore cities effortlessly with our Smart City Search project, featuring a simple yet powerful autocomplete function for seamless navigation and discovery.",
     technologies: [
@@ -215,7 +271,7 @@ export const projectsData = [
   {
     title: "Github User Finder",
     description:
-      "Easily discover GitHub users with our user finder project, providing a streamlined search experience to locate developers and explore their profiles quickly.",
+      "Entdecken Sie GitHub-Benutzer ganz einfach mit unserem Benutzerfinder-Projekt, das eine optimierte Sucherfahrung bietet, um Entwickler zu finden und ihre Profile schnell zu erkunden.",
     description_EN:
       "Easily discover GitHub users with our user finder project, providing a streamlined search experience to locate developers and explore their profiles quickly.",
     technologies: [
