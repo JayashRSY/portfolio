@@ -25,6 +25,7 @@ import webflowicon from "../../assets/icons/webflowicon.svg";
 import taskMockup from "../../assets/img/projects/task-tracker.png";
 import winplayMockup from "../../assets/img/projects/winplay.png";
 import kalabhavanMockup from "../../assets/img/projects/kalabhavan.png";
+import innov8Mockup from "../../assets/img/projects/innov8.png";
 import kanbanMockup from "../../assets/img/projects/kanban.png";
 import diceMockup from "../../assets/img/projects/dice-game.png";
 import codingMockup from "../../assets/img/projects/compiler.png";
@@ -39,6 +40,7 @@ import hardwareicon from "../../assets/icons/hardware-icon.svg";
 import expressiconwhite from "../../assets/icons/expressiconwhite.svg";
 import angularicon from "../../assets/icons/icons8-angular-100.png";
 import awsicon from "../../assets/icons/icons8-amazon-web-services-100.png";
+// import bootstrapIcon from "../../assets/icons/bootstrap-icon.svg";
 import {
   GoHome,
   GoPerson,
@@ -92,6 +94,32 @@ export const headerIntroData = {
 } as const;
 
 export const projectsData = [
+  {
+    title: "Innov8",
+    description:
+      "Entwicklung einer professionellen und benutzerfreundlichen Website, die die Expertise des Unternehmens in den Bereichen IT-Beratung, Softwareentwicklung und damit verbundene Dienstleistungen präsentiert, um neue Kunden zu gewinnen und die Online-Präsenz des Unternehmens zu verbessern.",
+    description_EN:
+      "Developed a professional and user-friendly website that showcases the company's expertise in IT consulting, software development, and related services to attract new clients and enhance the company's online presence.",
+    technologies: [
+      { name: "Html", icon: htmlicon },
+      { name: "CSS", icon: cssicon },
+      { name: "JavaScript", icon: javascripticon },
+      // { name: "Bootstrap", icons: bootstrapIcon },
+      // { name: "SCSS", icons: sassscssicon },
+      { name: "Angular", icon: angularicon },
+    ],
+    image: innov8Mockup,
+    deploymenturl: "https://innov-8.netlify.app/",
+    githuburl: "https://github.com/JayashRSY/innov8",
+    githubicon: FiGithub,
+    deploymenticon: FiLink,
+    colors: {
+      main: "main-btn",
+      second: "secondary-btn",
+      icon: "white",
+      projectcolor: "#70B9BE",
+    },
+  },
   {
     title: "KalaBhavan",
     description:
