@@ -11,6 +11,8 @@ import tailwindcssicon from "../../assets/icons/tailwindicon.svg";
 import mongodbicon from "../../assets/icons/mongoicon.svg";
 import expressicon from "../../assets/icons/expressicon.svg";
 import sassscssicon from "../../assets/icons/sassicon.svg";
+import nextjsicon from "../../assets/icons/nextjsicon.svg";
+import nextjsiconwhite from "../../assets/icons/nextjsiconwhite.svg";
 // import trelloicon from "../../assets/icons/trelloicon.svg";
 import apiicon from "../../assets/icons/apiicon.svg";
 // import axiosicon from "../../assets/icons/axiosicon.svg";
@@ -27,6 +29,7 @@ import winplayMockup from "../../assets/img/projects/winplay.png";
 import kalabhavanMockup from "../../assets/img/projects/kalabhavan.png";
 import innov8Mockup from "../../assets/img/projects/innov8.png";
 import kanbanMockup from "../../assets/img/projects/kanban.png";
+import landlordMockup from "../../assets/img/projects/landlord.png";
 import diceMockup from "../../assets/img/projects/dice-game.png";
 import codingMockup from "../../assets/img/projects/compiler.png";
 import cityMockup from "../../assets/img/projects/city-search.png";
@@ -95,6 +98,31 @@ export const headerIntroData = {
 
 export const projectsData = [
   {
+    title: "Landlord",
+    description:
+      "Die Immobilienplattform verfügt über eine NextJS-basierte Schnittstelle mit Tailwind CSS- und Shadcn UI-Komponenten. Benutzer können Immobilien auflisten, Fotos hochladen und eine Live-Kartenansicht nutzen. Clerk übernimmt die Benutzerverwaltung und ermöglicht eine nahtlose Authentifizierung und Kontoverwaltung. Käufer können Angebote durchsuchen, Makler kontaktieren und mit den benutzerfreundlichen Funktionen interagieren, wodurch ein effizientes Immobilienerlebnis entsteht.",
+    description_EN:
+      "Landlord is a real estate platform featuring a NextJS-powered interface with Tailwind CSS and Shadcn UI components. Users can list properties, upload photos, and utilize a live map view. Clerk handles user management, enabling seamless authentication and account management. Buyers can browse listings, contact agents, and interact with the user-friendly features, creating an efficient real estate experience.",
+    technologies: [
+      { name: "Html", icon: htmlicon },
+      { name: "CSS", icon: cssicon },
+      { name: "JavaScript", icon: javascripticon },
+      { name: "React", icon: reacticon },
+      { name: "React", icon: nextjsiconwhite },
+    ],
+    image: landlordMockup,
+    deploymenturl: "https://landlord-one.vercel.app/",
+    githuburl: "https://github.com/JayashRSY/landlord",
+    githubicon: FiGithub,
+    deploymenticon: FiLink,
+    colors: {
+      main: "main-btn",
+      second: "secondary-btn",
+      icon: "white",
+      projectcolor: "#70B9BE",
+    },
+  },
+  {
     title: "Innov8",
     description:
       "Entwicklung einer professionellen und benutzerfreundlichen Website, die die Expertise des Unternehmens in den Bereichen IT-Beratung, Softwareentwicklung und damit verbundene Dienstleistungen präsentiert, um neue Kunden zu gewinnen und die Online-Präsenz des Unternehmens zu verbessern.",
@@ -123,9 +151,9 @@ export const projectsData = [
   {
     title: "KalaBhavan",
     description:
-      "Kalabhavan is a dynamic e-commerce platform tailored for artists and administrators to showcase, manage, and sell customized metal posters. The website facilitates user sign-ups, design uploads, and streamlined management of poster designs, providing a vibrant marketplace for art enthusiasts.",
-    description_EN:
       "Kalabhavan ist eine dynamische E-Commerce-Plattform, die auf Künstler und Administratoren zugeschnitten ist, um maßgeschneiderte Metallposter zu präsentieren, zu verwalten und zu verkaufen. Die Website erleichtert Benutzeranmeldungen, Design-Uploads und eine optimierte Verwaltung von Posterdesigns und bietet einen lebendigen Marktplatz für Kunstliebhaber.",
+    description_EN:
+      "Kalabhavan is a dynamic e-commerce platform tailored for artists and administrators to showcase, manage, and sell customized metal posters. The website facilitates user sign-ups, design uploads, and streamlined management of poster designs, providing a vibrant marketplace for art enthusiasts.",
     technologies: [
       { name: "Html", icon: htmlicon },
       { name: "CSS", icon: cssicon },
@@ -368,12 +396,12 @@ export const skillsDataWeb = [
         icon: reacticon,
         color: "#61DAFB",
       },
-      // {
-      //   title: "Next.js",
-      //   hash: "#Next.js",
-      //   icon: [nextjsicon, nextjsiconwhite],
-      //   color: ["#000000", "#FFFFFF"],
-      // },
+      {
+        title: "Next.js",
+        hash: "#Next.js",
+        icon: [nextjsicon, nextjsiconwhite],
+        color: ["#000000", "#FFFFFF"],
+      },
       {
         title: "Node.js",
         hash: "#Node.js",

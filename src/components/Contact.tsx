@@ -9,10 +9,10 @@ import { ToastContainer, toast } from "react-toastify";
 import { useTheme } from "../context/theme-context";
 import { motion, useScroll, useTransform } from "framer-motion";
 import "react-toastify/dist/ReactToastify.css";
+import emailjs from "@emailjs/browser";
 
 const Contact: React.FC = () => {
-  // const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || "";
-  const apiBaseUrl = "https://jrsy-mailer.vercel.app/contact";
+  const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || "";
 
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
@@ -23,7 +23,7 @@ const Contact: React.FC = () => {
   const { ref } = useSectionInView("Contact");
   const { language } = useLanguage();
   const { theme } = useTheme();
-  const [error, setError] = useState<string | any>(null);
+  const [error, setError] = useState<string | unknown>(null);
 
   const animationReference = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -38,23 +38,40 @@ const Contact: React.FC = () => {
     console.log(error);
 
     e.preventDefault();
-    const data = new FormData(e.currentTarget);
 
     try {
-      const response = await axios.post(apiBaseUrl, data);
-      console.log(response);
-      if (language === "DE") {
-        toast.success(toastMessages.successEmailSent.de);
-      } else {
-        toast.success(toastMessages.successEmailSent.en);
-      }
+      // const data = new FormData(e.currentTarget) as unknown as HTMLFormElement;
+      // const { name, email, subject, message } = e.target;
+
+      emailjs
+        .sendForm(
+          "service_xen6yej",
+          "template_uc7d8ce",
+          e.currentTarget,
+          "dIBAv2XFuB8x-0WA3"
+        )
+        .then(
+          (res) => {
+            console.log("SUCCESS!", res);
+            form.reset();
+            if (language === "DE") {
+              toast.success(toastMessages.successEmailSent.de);
+            } else {
+              toast.success(toastMessages.successEmailSent.en);
+            }
+          },
+          (error) => {
+            console.log("FAILED...", error);
+            if (language === "DE") {
+              toast.error(toastMessages.failedEmailSent.de);
+            } else {
+              toast.error(toastMessages.failedEmailSent.en);
+            }
+          }
+        );
     } catch (error) {
       console.log(error);
-      if (language === "DE") {
-        toast.error(toastMessages.failedEmailSent.de);
-      } else {
-        toast.error(toastMessages.failedEmailSent.en);
-      }
+
       setError("An Error occured, try again later");
     }
   };
@@ -69,7 +86,7 @@ const Contact: React.FC = () => {
     indentation: string
   ) => {
     const words = text.split(" ");
-    let lines: string[] = [];
+    const lines: string[] = [];
     let currentLine = "";
 
     words.forEach((word) => {
@@ -149,7 +166,7 @@ ${name}${lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""}
   // // 🚀 Initiating Quantum Email Transmission 🪐
   // const launchEmail = async () => {
   //   try {
-  //     const response = await fetch('https://JayashRSY.netlify.com/send',{
+  //     const response = await fetch('https://alpaycelik.dev/send',{
   //     method: 'POST',
   //     headers: {'Content-Type': 'application/json'},
   //     body: JSON.stringify({
