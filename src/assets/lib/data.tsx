@@ -30,6 +30,7 @@ import kalabhavanMockup from "../../assets/img/projects/kalabhavan.png";
 import innov8Mockup from "../../assets/img/projects/innov8.png";
 import kanbanMockup from "../../assets/img/projects/kanban.png";
 import landlordMockup from "../../assets/img/projects/landlord.png";
+import promptPediaMockup from "../../assets/img/projects/prompt-pedia.png";
 import diceMockup from "../../assets/img/projects/dice-game.png";
 import codingMockup from "../../assets/img/projects/compiler.png";
 import cityMockup from "../../assets/img/projects/city-search.png";
@@ -97,6 +98,32 @@ export const headerIntroData = {
 } as const;
 
 export const projectsData = [
+  {
+    title: "Prompt Pedia",
+    description:
+      "Prompt Pedia ist eine Full-Stack-Anwendung in Next.js, die von MongoDB unterstützt wird und es Benutzern ermöglicht, einzigartige Eingabeaufforderungen für Sprachmodelle zu erstellen, zu teilen und zu entdecken.",
+    description_EN:
+      "Prompt Pedia is a full-stack Next.js application powered by MongoDB, enabling users to create, share, and discover unique prompts for language models.",
+    technologies: [
+      { name: "Html", icon: htmlicon },
+      { name: "CSS", icon: cssicon },
+      { name: "JavaScript", icon: javascripticon },
+      { name: "React", icon: reacticon },
+      { name: "React", icon: nextjsiconwhite },
+      { name: "MongoDB", icon: mongodbicon },
+    ],
+    image: promptPediaMockup,
+    deploymenturl: "https://prompt-pedia-101.vercel.app/",
+    githuburl: "https://github.com/JayashRSY/prompt-pedia",
+    githubicon: FiGithub,
+    deploymenticon: FiLink,
+    colors: {
+      main: "main-btn",
+      second: "secondary-btn",
+      icon: "white",
+      projectcolor: "#70B9BE",
+    },
+  },
   {
     title: "Landlord",
     description:
