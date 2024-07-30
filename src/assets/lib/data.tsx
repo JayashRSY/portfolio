@@ -744,6 +744,10 @@ export const contactData = {
       en: "Send",
     },
   },
+  cta: {
+    de: "Senden",
+    en: "Send",
+  },
   icon: FiMail,
   iconcolor: "#FFFFFF",
   colors: {

@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 import Button from "./Button";
-import axios from "axios";
 import { Highlight, themes } from "prism-react-renderer";
 import { contactData, toastMessages } from "../assets/lib/data.tsx";
 import { useSectionInView } from "../assets/lib/hooks";
@@ -12,8 +11,6 @@ import "react-toastify/dist/ReactToastify.css";
 import emailjs from "@emailjs/browser";
 
 const Contact: React.FC = () => {
-  const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || "";
-
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [subject, setSubject] = useState<string>("");
@@ -24,7 +21,7 @@ const Contact: React.FC = () => {
   const { language } = useLanguage();
   const { theme } = useTheme();
   const [error, setError] = useState<string | unknown>(null);
-
+  const [isLoading, setIsLoading] = useState<boolean>(false);
   const animationReference = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: animationReference,
@@ -36,29 +33,29 @@ const Contact: React.FC = () => {
   const notifySentForm: React.FormEventHandler<HTMLFormElement> = async (e) => {
     setError(null);
     console.log(error);
-
+    setIsLoading(true);
     e.preventDefault();
 
     try {
-      // const data = new FormData(e.currentTarget) as unknown as HTMLFormElement;
-      // const { name, email, subject, message } = e.target;
-
       emailjs
         .sendForm(
-          "service_xen6yej",
-          "template_uc7d8ce",
+          import.meta.env.VITE_SERVICE_ID,
+          import.meta.env.VITE_TEMPLATE_ID,
           e.currentTarget,
-          "dIBAv2XFuB8x-0WA3"
+          import.meta.env.VITE_PUBLIC_KEY
         )
         .then(
           (res) => {
             console.log("SUCCESS!", res);
-            form.reset();
             if (language === "DE") {
               toast.success(toastMessages.successEmailSent.de);
             } else {
               toast.success(toastMessages.successEmailSent.en);
             }
+            setName("");
+            setEmail("");
+            setSubject("");
+            setMessage("");
           },
           (error) => {
             console.log("FAILED...", error);
@@ -73,6 +70,8 @@ const Contact: React.FC = () => {
       console.log(error);
 
       setError("An Error occured, try again later");
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -161,33 +160,6 @@ Across the cosmos, a message for you:\n
 Wishing you stardust dreams,\n
 ${name}${lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""}
 \``;
-
-  //   const codeSnippet2 = `
-  // // 🚀 Initiating Quantum Email Transmission 🪐
-  // const launchEmail = async () => {
-  //   try {
-  //     const response = await fetch('https://alpaycelik.dev/send',{
-  //     method: 'POST',
-  //     headers: {'Content-Type': 'application/json'},
-  //     body: JSON.stringify({
-  //      sender,
-  //      recipient,
-  //      subject,
-  //      message
-  //     })
-  //    });
-
-  //    if (response.ok) {
-  //    console.log('🌌 Transmission successful!');
-  //    } else {
-  //    console.error('🌠 Cosmic glitch encountered...');
-  //    }
-  //   } catch (error) {
-  //   console.error('🌪 Quantum disturbance detected:', error);
-  //   }
-  // };
-  // // 🚀 Ready for Liftoff? 🛸
-  // launchEmail();`;
 
   return (
     <React.Fragment>
@@ -328,18 +300,41 @@ ${name}${lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""}
                 ? `${contactData.privacyOptIn.description.de}`
                 : `${contactData.privacyOptIn.description.en}`}
             </p>
-            <Button
-              value={
-                language === "DE"
-                  ? `${contactData.button.value.de}`
-                  : `${contactData.button.value.en}`
-              }
-              iconSVG={contactData.icon}
-              buttoncolor={contactData.colors.main}
-              iconcolor={contactData.colors.icon}
-              type="submit"
-              elementType="input"
-            />
+            {isLoading ? (
+              <svg
+                className="animate-spin h-10 w-10 text-white"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <circle
+                  className="opacity-25"
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  strokeWidth="4"
+                ></circle>
+                <path
+                  className="opacity-75"
+                  fill="currentColor"
+                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                ></path>
+              </svg>
+            ) : (
+              <Button
+                value={
+                  language === "DE"
+                    ? `${contactData.button.value.de}`
+                    : `${contactData.button.value.en}`
+                }
+                iconSVG={contactData.icon}
+                buttoncolor={contactData.colors.main}
+                iconcolor={contactData.colors.icon}
+                type="submit"
+                elementType="input"
+              />
+            )}
             <ToastContainer
               className="w-max text-3xl block p-3 max-lg:w-full "
               position="bottom-center"
