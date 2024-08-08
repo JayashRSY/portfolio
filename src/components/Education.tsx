@@ -15,8 +15,8 @@ const Education: React.FC = () => {
     target: animationReference,
     offset: ["0 1", "1.33 1"],
   });
-  const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
-  const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
+  const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
   const paragraphs =
     language === "DE"
       ? educationData.paragraphs_DE
@@ -29,8 +29,8 @@ const Education: React.FC = () => {
           <motion.div
             ref={animationReference}
             style={{
-              scale: scaleProgess,
-              opacity: opacityProgess,
+              scale: scaleProgress,
+              opacity: opacityProgress,
               textAlign: "left",
             }}
           >

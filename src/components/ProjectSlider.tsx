@@ -1,8 +1,9 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import bannerBg from "../assets/img/bannerbg.webp";
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Button from "./Button";
 import LiveTicker from "./ParallaxText";
-import { projectsData, toastMessages } from "../assets/lib/data";
+import { toastMessages } from "../assets/lib/data";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectCards, Pagination } from "swiper/modules";
 import { ToastContainer, toast } from "react-toastify";
@@ -14,17 +15,21 @@ import "react-toastify/dist/ReactToastify.css";
 import "swiper/css";
 import "swiper/css/effect-cards";
 import "swiper/css/pagination";
+import { formatSheetData } from "../utils/formatSheetData";
+import { getProjects } from "../api/authApi";
 
 const ProjectSlider: React.FC = () => {
   const { ref } = useSectionInView("Projects");
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const [projectsData, setProjectsData] = useState<any>([]);
   const { language } = useLanguage();
   const animationReference = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: animationReference,
     offset: ["1 1", "1.3 1"],
   });
-  const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
-  const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
+  const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
   const notifyServerRequest = () => {
     if (language === "DE") {
       toast.info(toastMessages.loadingProject.de);
@@ -33,6 +38,21 @@ const ProjectSlider: React.FC = () => {
     }
   };
 
+  useEffect(() => {
+    const fetchProjectData = async () => {
+      const response = await getProjects();
+
+      let newData = formatSheetData(response?.values);
+      const updatedProjects = newData.map((project: any) => ({
+        ...project, // spread the existing properties of the object
+        technologies: project.technologies
+          .split(", ")
+          .map((tech: string) => tech.trim()), // split and trim each technology
+      }));
+      setProjectsData(updatedProjects);
+    };
+    fetchProjectData();
+  }, [projectsData]);
   return (
     <React.Fragment>
       <section
@@ -66,8 +86,8 @@ const ProjectSlider: React.FC = () => {
             <motion.div
               ref={animationReference}
               style={{
-                scale: scaleProgess,
-                opacity: opacityProgess,
+                scale: scaleProgress,
+                opacity: opacityProgress,
                 textAlign: "center",
               }}
             >
@@ -95,7 +115,7 @@ const ProjectSlider: React.FC = () => {
                 clickable: true,
               }}
             >
-              {projectsData.map((project, index: number) => (
+              {projectsData?.map((project: any, index: number) => (
                 <SwiperSlide
                   key={index}
                   className="quote-outer-container bg-[--darkblue] text-[--white] flex flex-row justify-between  rounded-2xl p-20 text-left max-lg:hidden "
@@ -113,8 +133,8 @@ const ProjectSlider: React.FC = () => {
                         {language === "DE" ? "Technologien" : "Technologies"}
                       </h3>
                       <div className="grid grid-cols-6 gap-10 p-4">
-                        {project.technologies.map(
-                          (technology, innerIndex: number) => (
+                        {project?.technologies?.map(
+                          (technology: any, innerIndex: number) => (
                             <img
                               key={innerIndex}
                               src={technology.icon}
@@ -157,7 +177,7 @@ const ProjectSlider: React.FC = () => {
                 </SwiperSlide>
               ))}
             </Swiper>
-            {projectsData.map((project, index: number) => (
+            {projectsData?.map((project: any, index: number) => (
               <article
                 key={index}
                 className="bg-darkblue flex flex-col gap-10 w-[80%] h-full  border-lightblue border-[0.4rem] p-8 rounded-xl mb-10 min-[1024px]:hidden max-lg:w-[90%]"
@@ -196,7 +216,7 @@ const ProjectSlider: React.FC = () => {
                   </h3>
                   <div className="grid grid-cols-3 gap-10 p-4">
                     {project.technologies.map(
-                      (technology, innerIndex: number) => (
+                      (technology: any, innerIndex: number) => (
                         <img
                           key={innerIndex}
                           src={technology.icon}
