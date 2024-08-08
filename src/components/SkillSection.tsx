@@ -1,4 +1,5 @@
 import React from "react";
+import { useSectionInView } from "../assets/lib/hooks";
 
 interface Skill {
   title: string;
@@ -18,6 +19,8 @@ interface SkillSectionProps {
 }
 
 const SkillSection: React.FC<SkillSectionProps> = ({ skillsData, theme }) => {
+  const { ref } = useSectionInView("Skills");
+  
   const getSkillIconSrc = (theme: string, skill: Skill) => {
     if (
       theme === "dark" &&
@@ -51,6 +54,7 @@ const SkillSection: React.FC<SkillSectionProps> = ({ skillsData, theme }) => {
           ? "bg-[--blackblue] dark-mode-shadow"
           : "bg-[--icewhite] dark-shadow"
       }`}
+      ref={ref}
     >
       <div
         className={`absolute top-10 left-1/2 transform -translate-x-1/2 px-4 py-2  rounded-t-xl `}

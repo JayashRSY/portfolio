@@ -1,8 +1,9 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import bannerBg from "../assets/img/bannerbg.webp";
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Button from "./Button";
 import LiveTicker from "./ParallaxText";
-import { projectsData, toastMessages } from "../assets/lib/data";
+import { toastMessages } from "../assets/lib/data";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectCards, Pagination } from "swiper/modules";
 import { ToastContainer, toast } from "react-toastify";
@@ -14,17 +15,23 @@ import "react-toastify/dist/ReactToastify.css";
 import "swiper/css";
 import "swiper/css/effect-cards";
 import "swiper/css/pagination";
+import { formatSheetData } from "../utils/formatSheetData";
+import { getProjects } from "../api/authApi";
+import StackIcon from "tech-stack-icons";
+import { FiGithub, FiLink } from "react-icons/fi";
 
 const ProjectSlider: React.FC = () => {
   const { ref } = useSectionInView("Projects");
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const [projectsData, setProjectsData] = useState<any>([]);
   const { language } = useLanguage();
   const animationReference = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: animationReference,
     offset: ["1 1", "1.3 1"],
   });
-  const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
-  const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
+  const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
   const notifyServerRequest = () => {
     if (language === "DE") {
       toast.info(toastMessages.loadingProject.de);
@@ -33,6 +40,21 @@ const ProjectSlider: React.FC = () => {
     }
   };
 
+  useEffect(() => {
+    const fetchProjectData = async () => {
+      const response = await getProjects();
+
+      let newData = formatSheetData(response?.values);
+      const updatedProjects = newData.map((project: any) => ({
+        ...project, // spread the existing properties of the object
+        technologies: project.technologies
+          .split(",")
+          .map((tech: string) => tech.trim()), // split and trim each technology
+      }));
+      setProjectsData(updatedProjects);
+    };
+    fetchProjectData();
+  }, [projectsData]);
   return (
     <React.Fragment>
       <section
@@ -66,8 +88,8 @@ const ProjectSlider: React.FC = () => {
             <motion.div
               ref={animationReference}
               style={{
-                scale: scaleProgess,
-                opacity: opacityProgess,
+                scale: scaleProgress,
+                opacity: opacityProgress,
                 textAlign: "center",
               }}
             >
@@ -95,34 +117,29 @@ const ProjectSlider: React.FC = () => {
                 clickable: true,
               }}
             >
-              {projectsData.map((project, index: number) => (
+              {projectsData?.map((project: any, index: number) => (
                 <SwiperSlide
                   key={index}
                   className="quote-outer-container bg-[--darkblue] text-[--white] flex flex-row justify-between  rounded-2xl p-20 text-left max-lg:hidden "
                 >
                   <div className=" w-[55%] flex flex-col gap-12 justify-between ">
-                    <h2>{project.title}</h2>
+                    <h2>{project.name}</h2>
 
                     <p className="text-white">
                       {language === "DE"
-                        ? project.description
-                        : project.description_EN}
+                        ? project.description_de
+                        : project.description}
                     </p>
                     <div className="technologies">
                       <h3>
                         {language === "DE" ? "Technologien" : "Technologies"}
                       </h3>
                       <div className="grid grid-cols-6 gap-10 p-4">
-                        {project.technologies.map(
-                          (technology, innerIndex: number) => (
-                            <img
-                              key={innerIndex}
-                              src={technology.icon}
-                              alt={`${project.title}-icon`}
-                              className="h-[5rem] w-[60%] "
-                              data-tooltip-id="my-tooltip"
-                              data-tooltip-content={technology.name}
-                            />
+                        {project?.technologies?.map(
+                          (technology: any, innerIndex: number) => (
+                            <div key={innerIndex}>
+                              <StackIcon name={technology} />
+                            </div>
                           )
                         )}
                       </div>
@@ -130,26 +147,26 @@ const ProjectSlider: React.FC = () => {
                     <div className="buttons flex gap-10">
                       <Button
                         label="Live Demo"
-                        link={project.deploymenturl}
-                        iconSVG={project.deploymenticon}
-                        buttoncolor={project.colors.main}
-                        iconcolor={project.colors.icon}
-                        onClick={notifyServerRequest}
+                        link={project.demo_url}
+                        iconSVG={FiLink}
+                        buttoncolor={"main-btn"}
+                        iconcolor={"white"}
+                        // onClick={notifyServerRequest}
                       />
                       <Button
                         label="Github Repository"
-                        link={project.githuburl}
-                        iconSVG={project.githubicon}
-                        buttoncolor={project.colors.main}
-                        iconcolor={project.colors.icon}
+                        link={project.repo_url}
+                        iconSVG={FiGithub}
+                        buttoncolor={"main-btn"}
+                        iconcolor={"white"}
                       />
                     </div>
                   </div>
 
                   <div className="right-content relative h-[40rem] overflow-hidden rounded-xl w-[40%] transition-all duration-200 shadow-2xl">
                     <img
-                      src={project.image}
-                      alt={`${project.title}-project-mockup`}
+                      src={project.img_url}
+                      alt={`${project.name}-project-mockup`}
                       className={`w-full h-auto transition-all duration-[6000ms] transform opacity-100 hover:translate-y-[-50%] 
                       `}
                     />
@@ -157,37 +174,37 @@ const ProjectSlider: React.FC = () => {
                 </SwiperSlide>
               ))}
             </Swiper>
-            {projectsData.map((project, index: number) => (
+            {projectsData?.map((project: any, index: number) => (
               <article
                 key={index}
                 className="bg-darkblue flex flex-col gap-10 w-[80%] h-full  border-lightblue border-[0.4rem] p-8 rounded-xl mb-10 min-[1024px]:hidden max-lg:w-[90%]"
               >
-                <h2 className="text-white">{project.title}</h2>
+                <h2 className="text-white">{project.name}</h2>
                 <img
-                  src={project.image}
-                  alt={project.image}
+                  src={project.img_url}
+                  alt={project.name}
                   className="h-[35vh] w-full object-cover object-top rounded-3xl"
                 />
                 <div className="buttons flex gap-10 max-lg:flex-col">
                   <Button
                     label="Live Demo"
-                    link={project.deploymenturl}
-                    iconSVG={project.deploymenticon}
-                    buttoncolor={project.colors.main}
-                    iconcolor={project.colors.icon}
+                    link={project.demo_url}
+                    iconSVG={FiLink}
+                    buttoncolor={"main-btn"}
+                    iconcolor={"white"}
                   />
                   <Button
                     label="Github Repository"
-                    link={project.githuburl}
-                    iconSVG={project.githubicon}
-                    buttoncolor={project.colors.main}
-                    iconcolor={project.colors.icon}
+                    link={project.repo_url}
+                    iconSVG={FiGithub}
+                    buttoncolor={"main-btn"}
+                    iconcolor={"white"}
                   />
                 </div>
                 <p className="text-white  max-lg:text-4xl">
                   {language === "DE"
-                    ? project.description
-                    : project.description_EN}
+                    ? project.description_de
+                    : project.description}
                 </p>
 
                 <div className="technologies">
@@ -196,15 +213,16 @@ const ProjectSlider: React.FC = () => {
                   </h3>
                   <div className="grid grid-cols-3 gap-10 p-4">
                     {project.technologies.map(
-                      (technology, innerIndex: number) => (
-                        <img
-                          key={innerIndex}
-                          src={technology.icon}
-                          alt={`${project.title}-icon`}
-                          className="h-[5rem] w-[60%] "
-                          data-tooltip-id="my-tooltip"
-                          data-tooltip-content={technology.name}
-                        />
+                      (technology: any, innerIndex: number) => (
+                        // <img
+                        //   key={innerIndex}
+                        //   src={technology.icon}
+                        //   alt={`${project.title}-icon`}
+                        //   className="h-[5rem] w-[60%] "
+                        //   data-tooltip-id="my-tooltip"
+                        //   data-tooltip-content={technology.name}
+                        // />
+                        <StackIcon name={technology} />
                       )
                     )}
                   </div>
