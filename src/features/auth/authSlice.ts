@@ -1,9 +1,8 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import { IUser } from '../../interfaces/IApiTypes'
 
 export interface authState {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    user?: IUser,
+    user?: any,
 }
 
 const initialState: authState = {
@@ -17,7 +16,7 @@ export const userSlice = createSlice({
         setUser: (state, action: PayloadAction<any>) => {
             state.user = action.payload
         },
-       
+
     },
 })
 
