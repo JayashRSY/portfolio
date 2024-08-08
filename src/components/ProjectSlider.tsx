@@ -3,10 +3,10 @@ import bannerBg from "../assets/img/bannerbg.webp";
 import React, { useEffect, useRef, useState } from "react";
 import Button from "./Button";
 import LiveTicker from "./ParallaxText";
-import { toastMessages } from "../assets/lib/data";
+// import { toastMessages } from "../assets/lib/data";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectCards, Pagination } from "swiper/modules";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import { Tooltip as ReactTooltip } from "react-tooltip";
 import { useSectionInView } from "../assets/lib/hooks";
 import { useLanguage } from "../context/language-context";
@@ -16,7 +16,7 @@ import "swiper/css";
 import "swiper/css/effect-cards";
 import "swiper/css/pagination";
 import { formatSheetData } from "../utils/formatSheetData";
-import { getProjects } from "../api/authApi";
+import { getProjects } from "../api/dataApi";
 import StackIcon from "tech-stack-icons";
 import { FiGithub, FiLink } from "react-icons/fi";
 
@@ -32,13 +32,13 @@ const ProjectSlider: React.FC = () => {
   });
   const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
-  const notifyServerRequest = () => {
-    if (language === "DE") {
-      toast.info(toastMessages.loadingProject.de);
-    } else {
-      toast.info(toastMessages.loadingProject.en);
-    }
-  };
+  // const notifyServerRequest = () => {
+  //   if (language === "DE") {
+  //     toast.info(toastMessages.loadingProject.de);
+  //   } else {
+  //     toast.info(toastMessages.loadingProject.en);
+  //   }
+  // };
 
   useEffect(() => {
     const fetchProjectData = async () => {
@@ -214,15 +214,9 @@ const ProjectSlider: React.FC = () => {
                   <div className="grid grid-cols-3 gap-10 p-4">
                     {project.technologies.map(
                       (technology: any, innerIndex: number) => (
-                        // <img
-                        //   key={innerIndex}
-                        //   src={technology.icon}
-                        //   alt={`${project.title}-icon`}
-                        //   className="h-[5rem] w-[60%] "
-                        //   data-tooltip-id="my-tooltip"
-                        //   data-tooltip-content={technology.name}
-                        // />
-                        <StackIcon name={technology} />
+                        <div key={innerIndex}>
+                          <StackIcon name={technology} />
+                        </div>
                       )
                     )}
                   </div>
