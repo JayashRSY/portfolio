@@ -17,6 +17,8 @@ import "swiper/css/effect-cards";
 import "swiper/css/pagination";
 import { formatSheetData } from "../utils/formatSheetData";
 import { getProjects } from "../api/authApi";
+import StackIcon from "tech-stack-icons";
+import { FiGithub, FiLink } from "react-icons/fi";
 
 const ProjectSlider: React.FC = () => {
   const { ref } = useSectionInView("Projects");
@@ -46,7 +48,7 @@ const ProjectSlider: React.FC = () => {
       const updatedProjects = newData.map((project: any) => ({
         ...project, // spread the existing properties of the object
         technologies: project.technologies
-          .split(", ")
+          .split(",")
           .map((tech: string) => tech.trim()), // split and trim each technology
       }));
       setProjectsData(updatedProjects);
@@ -121,12 +123,12 @@ const ProjectSlider: React.FC = () => {
                   className="quote-outer-container bg-[--darkblue] text-[--white] flex flex-row justify-between  rounded-2xl p-20 text-left max-lg:hidden "
                 >
                   <div className=" w-[55%] flex flex-col gap-12 justify-between ">
-                    <h2>{project.title}</h2>
+                    <h2>{project.name}</h2>
 
                     <p className="text-white">
                       {language === "DE"
-                        ? project.description
-                        : project.description_EN}
+                        ? project.description_de
+                        : project.description}
                     </p>
                     <div className="technologies">
                       <h3>
@@ -135,14 +137,9 @@ const ProjectSlider: React.FC = () => {
                       <div className="grid grid-cols-6 gap-10 p-4">
                         {project?.technologies?.map(
                           (technology: any, innerIndex: number) => (
-                            <img
-                              key={innerIndex}
-                              src={technology.icon}
-                              alt={`${project.title}-icon`}
-                              className="h-[5rem] w-[60%] "
-                              data-tooltip-id="my-tooltip"
-                              data-tooltip-content={technology.name}
-                            />
+                            <div key={innerIndex}>
+                              <StackIcon name={technology} />
+                            </div>
                           )
                         )}
                       </div>
@@ -150,26 +147,26 @@ const ProjectSlider: React.FC = () => {
                     <div className="buttons flex gap-10">
                       <Button
                         label="Live Demo"
-                        link={project.deploymenturl}
-                        iconSVG={project.deploymenticon}
-                        buttoncolor={project.colors.main}
-                        iconcolor={project.colors.icon}
-                        onClick={notifyServerRequest}
+                        link={project.demo_url}
+                        iconSVG={FiLink}
+                        buttoncolor={"main-btn"}
+                        iconcolor={"white"}
+                        // onClick={notifyServerRequest}
                       />
                       <Button
                         label="Github Repository"
-                        link={project.githuburl}
-                        iconSVG={project.githubicon}
-                        buttoncolor={project.colors.main}
-                        iconcolor={project.colors.icon}
+                        link={project.repo_url}
+                        iconSVG={FiGithub}
+                        buttoncolor={"main-btn"}
+                        iconcolor={"white"}
                       />
                     </div>
                   </div>
 
                   <div className="right-content relative h-[40rem] overflow-hidden rounded-xl w-[40%] transition-all duration-200 shadow-2xl">
                     <img
-                      src={project.image}
-                      alt={`${project.title}-project-mockup`}
+                      src={project.img_url}
+                      alt={`${project.name}-project-mockup`}
                       className={`w-full h-auto transition-all duration-[6000ms] transform opacity-100 hover:translate-y-[-50%] 
                       `}
                     />
@@ -182,32 +179,32 @@ const ProjectSlider: React.FC = () => {
                 key={index}
                 className="bg-darkblue flex flex-col gap-10 w-[80%] h-full  border-lightblue border-[0.4rem] p-8 rounded-xl mb-10 min-[1024px]:hidden max-lg:w-[90%]"
               >
-                <h2 className="text-white">{project.title}</h2>
+                <h2 className="text-white">{project.name}</h2>
                 <img
-                  src={project.image}
-                  alt={project.image}
+                  src={project.img_url}
+                  alt={project.name}
                   className="h-[35vh] w-full object-cover object-top rounded-3xl"
                 />
                 <div className="buttons flex gap-10 max-lg:flex-col">
                   <Button
                     label="Live Demo"
-                    link={project.deploymenturl}
-                    iconSVG={project.deploymenticon}
-                    buttoncolor={project.colors.main}
-                    iconcolor={project.colors.icon}
+                    link={project.demo_url}
+                    iconSVG={FiLink}
+                    buttoncolor={"main-btn"}
+                    iconcolor={"white"}
                   />
                   <Button
                     label="Github Repository"
-                    link={project.githuburl}
-                    iconSVG={project.githubicon}
-                    buttoncolor={project.colors.main}
-                    iconcolor={project.colors.icon}
+                    link={project.repo_url}
+                    iconSVG={FiGithub}
+                    buttoncolor={"main-btn"}
+                    iconcolor={"white"}
                   />
                 </div>
                 <p className="text-white  max-lg:text-4xl">
                   {language === "DE"
-                    ? project.description
-                    : project.description_EN}
+                    ? project.description_de
+                    : project.description}
                 </p>
 
                 <div className="technologies">
@@ -217,14 +214,15 @@ const ProjectSlider: React.FC = () => {
                   <div className="grid grid-cols-3 gap-10 p-4">
                     {project.technologies.map(
                       (technology: any, innerIndex: number) => (
-                        <img
-                          key={innerIndex}
-                          src={technology.icon}
-                          alt={`${project.title}-icon`}
-                          className="h-[5rem] w-[60%] "
-                          data-tooltip-id="my-tooltip"
-                          data-tooltip-content={technology.name}
-                        />
+                        // <img
+                        //   key={innerIndex}
+                        //   src={technology.icon}
+                        //   alt={`${project.title}-icon`}
+                        //   className="h-[5rem] w-[60%] "
+                        //   data-tooltip-id="my-tooltip"
+                        //   data-tooltip-content={technology.name}
+                        // />
+                        <StackIcon name={technology} />
                       )
                     )}
                   </div>

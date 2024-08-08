@@ -30,6 +30,7 @@
     "reactjs-popup": "^2.0.6",
     "redux-persist": "^6.0.0",
     "swiper": "^11.1.9",
+    "tech-stack-icons": "^2.0.3",
     "web-vitals": "^4.2.3"
   },
   "devDependencies": {
