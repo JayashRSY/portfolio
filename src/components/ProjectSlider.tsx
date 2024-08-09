@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import bannerBg from "../assets/img/bannerbg.webp";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef } from "react";
 import Button from "./Button";
 import LiveTicker from "./ParallaxText";
 // import { toastMessages } from "../assets/lib/data";
@@ -15,15 +15,16 @@ import "react-toastify/dist/ReactToastify.css";
 import "swiper/css";
 import "swiper/css/effect-cards";
 import "swiper/css/pagination";
-import { formatSheetData } from "../utils/formatSheetData";
-import { getProjects } from "../api/dataApi";
+// import { formatSheetData } from "../utils/formatSheetData";
+// import { getProjects } from "../api/dataApi";
 import StackIcon from "tech-stack-icons";
 import { FiGithub, FiLink } from "react-icons/fi";
+import { projectsData } from "../assets/lib/data";
 
 const ProjectSlider: React.FC = () => {
   const { ref } = useSectionInView("Projects");
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const [projectsData, setProjectsData] = useState<any>([]);
+  // const [projectsData, setProjectsData] = useState<any>([]);
   const { language } = useLanguage();
   const animationReference = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -40,21 +41,21 @@ const ProjectSlider: React.FC = () => {
   //   }
   // };
 
-  useEffect(() => {
-    const fetchProjectData = async () => {
-      const response = await getProjects();
+  // useEffect(() => {
+  //   const fetchProjectData = async () => {
+  //     const response = await getProjects();
 
-      let newData = formatSheetData(response?.values);
-      const updatedProjects = newData.map((project: any) => ({
-        ...project, // spread the existing properties of the object
-        technologies: project.technologies
-          .split(",")
-          .map((tech: string) => tech.trim()), // split and trim each technology
-      }));
-      setProjectsData(updatedProjects);
-    };
-    fetchProjectData();
-  }, [projectsData]);
+  //     let newData = formatSheetData(response?.values);
+  //     const updatedProjects = newData.map((project: any) => ({
+  //       ...project, // spread the existing properties of the object
+  //       technologies: project.technologies
+  //         .split(",")
+  //         .map((tech: string) => tech.trim()), // split and trim each technology
+  //     }));
+  //     setProjectsData(updatedProjects);
+  //   };
+  //   fetchProjectData();
+  // }, [projectsData]);
   return (
     <React.Fragment>
       <section
@@ -123,7 +124,7 @@ const ProjectSlider: React.FC = () => {
                   className="quote-outer-container bg-[--darkblue] text-[--white] flex flex-row justify-between  rounded-2xl p-20 text-left max-lg:hidden "
                 >
                   <div className=" w-[55%] flex flex-col gap-12 justify-between ">
-                    <h2>{project.name}</h2>
+                    <h2>{project.title}</h2>
 
                     <p className="text-white">
                       {language === "DE"
@@ -147,7 +148,7 @@ const ProjectSlider: React.FC = () => {
                     <div className="buttons flex gap-10">
                       <Button
                         label="Live Demo"
-                        link={project.demo_url}
+                        link={project.deploymenturl}
                         iconSVG={FiLink}
                         buttoncolor={"main-btn"}
                         iconcolor={"white"}
@@ -155,7 +156,7 @@ const ProjectSlider: React.FC = () => {
                       />
                       <Button
                         label="Github Repository"
-                        link={project.repo_url}
+                        link={project.githuburl}
                         iconSVG={FiGithub}
                         buttoncolor={"main-btn"}
                         iconcolor={"white"}
@@ -165,8 +166,8 @@ const ProjectSlider: React.FC = () => {
 
                   <div className="right-content relative h-[40rem] overflow-hidden rounded-xl w-[40%] transition-all duration-200 shadow-2xl">
                     <img
-                      src={project.img_url}
-                      alt={`${project.name}-project-mockup`}
+                      src={project.image}
+                      alt={`${project.title}-project-mockup`}
                       className={`w-full h-auto transition-all duration-[6000ms] transform opacity-100 hover:translate-y-[-50%] 
                       `}
                     />
@@ -179,23 +180,23 @@ const ProjectSlider: React.FC = () => {
                 key={index}
                 className="bg-darkblue flex flex-col gap-10 w-[80%] h-full  border-lightblue border-[0.4rem] p-8 rounded-xl mb-10 min-[1024px]:hidden max-lg:w-[90%]"
               >
-                <h2 className="text-white">{project.name}</h2>
+                <h2 className="text-white">{project.title}</h2>
                 <img
                   src={project.img_url}
-                  alt={project.name}
+                  alt={project.title}
                   className="h-[35vh] w-full object-cover object-top rounded-3xl"
                 />
                 <div className="buttons flex gap-10 max-lg:flex-col">
                   <Button
                     label="Live Demo"
-                    link={project.demo_url}
+                    link={project.deploymenturl}
                     iconSVG={FiLink}
                     buttoncolor={"main-btn"}
                     iconcolor={"white"}
                   />
                   <Button
                     label="Github Repository"
-                    link={project.repo_url}
+                    link={project.githuburl}
                     iconSVG={FiGithub}
                     buttoncolor={"main-btn"}
                     iconcolor={"white"}
