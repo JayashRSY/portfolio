@@ -47,6 +47,7 @@ import chakrauiicon from "../../assets/icons/chakrauiicon.svg";
 import bootstrapicon from "../../assets/icons/bootstrapicon.svg";
 import angularicon from "../../assets/icons/icons8-angular-100.png";
 import awsicon from "../../assets/icons/awsicon.svg";
+import pythonicon from "../../assets/icons/pythonicon.svg";
 // import bootstrapIcon from "../../assets/icons/bootstrap-icon.svg";
 import {
   GoHome,
@@ -421,6 +422,18 @@ export const skillsDataWeb = [
         color: ["#000000", "#FFFFFF"],
       },
       {
+        title: "Node.js",
+        hash: "#Node.js",
+        icon: nodejsicon,
+        color: "#339933",
+      },
+      {
+        title: "Express",
+        hash: "#Express",
+        icon: [expressicon, expressiconwhite],
+        color: ["#000000", "#FFFFFF"],
+      },
+      {
         title: "SASS/SCSS",
         hash: "#SASS/SCSS",
         icon: sassscssicon,
@@ -445,18 +458,6 @@ export const skillsDataWeb = [
         color: "#48C8C2",
       },
       {
-        title: "Node.js",
-        hash: "#Node.js",
-        icon: nodejsicon,
-        color: "#339933",
-      },
-      {
-        title: "Express",
-        hash: "#Express",
-        icon: [expressicon, expressiconwhite],
-        color: ["#000000", "#FFFFFF"],
-      },
-      {
         title: "Redux",
         hash: "#Redux",
         icon: reduxicon,
@@ -467,6 +468,12 @@ export const skillsDataWeb = [
         hash: "#MongoDB",
         icon: mongodbicon,
         color: "#449C45",
+      },
+      {
+        title: "Python",
+        hash: "#Python",
+        icon: pythonicon,
+        color: "#366F9E",
       },
       {
         title: "AWS",
