@@ -14,27 +14,27 @@ import sassscssicon from "../../assets/icons/sassicon.svg";
 import nextjsicon from "../../assets/icons/nextjsicon.svg";
 import nextjsiconwhite from "../../assets/icons/nextjsiconwhite.svg";
 // import trelloicon from "../../assets/icons/trelloicon.svg";
-import apiicon from "../../assets/icons/apiicon.svg";
+// import apiicon from "../../assets/icons/apiicon.svg";
 // import axiosicon from "../../assets/icons/axiosicon.svg";
 // import spotifyicon from "../../assets/icons/spotifyicon.svg";
-import netlifyicon from "../../assets/icons/netlifyicon.svg";
+// import netlifyicon from "../../assets/icons/netlifyicon.svg";
 // import rendericon from "../../assets/icons/rendericon.svg";
-import jwticon from "../../assets/icons/jwticon.svg";
+// import jwticon from "../../assets/icons/jwticon.svg";
 import wordpressicon from "../../assets/icons/wordpressicon.svg";
 import shopifyicon from "../../assets/icons/shopifyicon.svg";
 import webflowicon from "../../assets/icons/webflowicon.svg";
 // import tastyMockup from "../../assets/img/tasty_mockup.webp";
 import taskMockup from "../../assets/img/projects/task-tracker.png";
 import winplayMockup from "../../assets/img/projects/winplay.png";
-import kalabhavanMockup from "../../assets/img/projects/kalabhavan.png";
+// import kalabhavanMockup from "../../assets/img/projects/kalabhavan.png";
 import innov8Mockup from "../../assets/img/projects/innov8.png";
-import kanbanMockup from "../../assets/img/projects/kanban.png";
+// import kanbanMockup from "../../assets/img/projects/kanban.png";
 import landlordMockup from "../../assets/img/projects/landlord.png";
 import promptPediaMockup from "../../assets/img/projects/prompt-pedia.png";
 import diceMockup from "../../assets/img/projects/dice-game.png";
-import codingMockup from "../../assets/img/projects/compiler.png";
-import cityMockup from "../../assets/img/projects/city-search.png";
-import gitUserMockup from "../../assets/img/projects/github-finder.png";
+// import codingMockup from "../../assets/img/projects/compiler.png";
+// import cityMockup from "../../assets/img/projects/city-search.png";
+// import gitUserMockup from "../../assets/img/projects/github-finder.png";
 // import instorMockup from "../../assets/img/instor_mockup.webp";
 // import silentmoonMockup from "../../assets/img/silentmoon_mockup.webp";
 import profilepicture from "../img/me2.png";
@@ -42,8 +42,12 @@ import caricon from "../../assets/icons/car-icon.svg";
 import travelicon from "../../assets/icons/travel-icon.svg";
 import hardwareicon from "../../assets/icons/hardware-icon.svg";
 import expressiconwhite from "../../assets/icons/expressiconwhite.svg";
+import reduxicon from "../../assets/icons/reduxicon.svg";
+import chakrauiicon from "../../assets/icons/chakrauiicon.svg";
+import bootstrapicon from "../../assets/icons/bootstrapicon.svg";
 import angularicon from "../../assets/icons/icons8-angular-100.png";
-import awsicon from "../../assets/icons/icons8-amazon-web-services-100.png";
+import awsicon from "../../assets/icons/awsicon.svg";
+import pythonicon from "../../assets/icons/pythonicon.svg";
 // import bootstrapIcon from "../../assets/icons/bootstrap-icon.svg";
 import {
   GoHome,
@@ -101,17 +105,10 @@ export const projectsData = [
   {
     title: "Prompt Pedia",
     description:
-      "Prompt Pedia ist eine Full-Stack-Anwendung in Next.js, die von MongoDB unterstützt wird und es Benutzern ermöglicht, einzigartige Eingabeaufforderungen für Sprachmodelle zu erstellen, zu teilen und zu entdecken.",
-    description_EN:
       "Prompt Pedia is a full-stack Next.js application powered by MongoDB, enabling users to create, share, and discover unique prompts for language models.",
-    technologies: [
-      { name: "Html", icon: htmlicon },
-      { name: "CSS", icon: cssicon },
-      { name: "JavaScript", icon: javascripticon },
-      { name: "React", icon: reacticon },
-      { name: "React", icon: nextjsiconwhite },
-      { name: "MongoDB", icon: mongodbicon },
-    ],
+    description_de:
+      "Prompt Pedia ist eine Full-Stack-Anwendung in Next.js, die von MongoDB unterstützt wird und es Benutzern ermöglicht, einzigartige Eingabeaufforderungen für Sprachmodelle zu erstellen, zu teilen und zu entdecken.",
+    technologies: ["nextjs", "reactjs", "nodejs", "typescript", "mongodb"],
     image: promptPediaMockup,
     deploymenturl: "https://prompt-pedia-101.vercel.app/",
     githuburl: "https://github.com/JayashRSY/prompt-pedia",
@@ -127,15 +124,15 @@ export const projectsData = [
   {
     title: "Landlord",
     description:
-      "Die Immobilienplattform verfügt über eine NextJS-basierte Schnittstelle mit Tailwind CSS- und Shadcn UI-Komponenten. Benutzer können Immobilien auflisten, Fotos hochladen und eine Live-Kartenansicht nutzen. Clerk übernimmt die Benutzerverwaltung und ermöglicht eine nahtlose Authentifizierung und Kontoverwaltung. Käufer können Angebote durchsuchen, Makler kontaktieren und mit den benutzerfreundlichen Funktionen interagieren, wodurch ein effizientes Immobilienerlebnis entsteht.",
-    description_EN:
       "Landlord is a real estate platform featuring a NextJS-powered interface with Tailwind CSS and Shadcn UI components. Users can list properties, upload photos, and utilize a live map view. Clerk handles user management, enabling seamless authentication and account management. Buyers can browse listings, contact agents, and interact with the user-friendly features, creating an efficient real estate experience.",
+    description_de:
+      "Die Immobilienplattform verfügt über eine NextJS-basierte Schnittstelle mit Tailwind CSS- und Shadcn UI-Komponenten. Benutzer können Immobilien auflisten, Fotos hochladen und eine Live-Kartenansicht nutzen. Clerk übernimmt die Benutzerverwaltung und ermöglicht eine nahtlose Authentifizierung und Kontoverwaltung. Käufer können Angebote durchsuchen, Makler kontaktieren und mit den benutzerfreundlichen Funktionen interagieren, wodurch ein effizientes Immobilienerlebnis entsteht.",
     technologies: [
-      { name: "Html", icon: htmlicon },
-      { name: "CSS", icon: cssicon },
-      { name: "JavaScript", icon: javascripticon },
-      { name: "React", icon: reacticon },
-      { name: "React", icon: nextjsiconwhite },
+      "nextjs",
+      "reactjs",
+      "typescript",
+      "tailwindcss",
+      "supabase",
     ],
     image: landlordMockup,
     deploymenturl: "https://landlord-one.vercel.app/",
@@ -152,16 +149,17 @@ export const projectsData = [
   {
     title: "Innov8",
     description:
-      "Entwicklung einer professionellen und benutzerfreundlichen Website, die die Expertise des Unternehmens in den Bereichen IT-Beratung, Softwareentwicklung und damit verbundene Dienstleistungen präsentiert, um neue Kunden zu gewinnen und die Online-Präsenz des Unternehmens zu verbessern.",
-    description_EN:
       "Developed a professional and user-friendly website that showcases the company's expertise in IT consulting, software development, and related services to attract new clients and enhance the company's online presence.",
+    description_de:
+      "Entwicklung einer professionellen und benutzerfreundlichen Website, die die Expertise des Unternehmens in den Bereichen IT-Beratung, Softwareentwicklung und damit verbundene Dienstleistungen präsentiert, um neue Kunden zu gewinnen und die Online-Präsenz des Unternehmens zu verbessern.",
     technologies: [
-      { name: "Html", icon: htmlicon },
-      { name: "CSS", icon: cssicon },
-      { name: "JavaScript", icon: javascripticon },
-      // { name: "Bootstrap", icons: bootstrapIcon },
-      // { name: "SCSS", icons: sassscssicon },
-      { name: "Angular", icon: angularicon },
+      "html5",
+      "css3",
+      "sass",
+      "bootstrap5",
+      "angular",
+      "js",
+      "typescript",
     ],
     image: innov8Mockup,
     deploymenturl: "https://innov-8.netlify.app/",
@@ -175,47 +173,46 @@ export const projectsData = [
       projectcolor: "#70B9BE",
     },
   },
-  {
-    title: "KalaBhavan",
-    description:
-      "Kalabhavan ist eine dynamische E-Commerce-Plattform, die auf Künstler und Administratoren zugeschnitten ist, um maßgeschneiderte Metallposter zu präsentieren, zu verwalten und zu verkaufen. Die Website erleichtert Benutzeranmeldungen, Design-Uploads und eine optimierte Verwaltung von Posterdesigns und bietet einen lebendigen Marktplatz für Kunstliebhaber.",
-    description_EN:
-      "Kalabhavan is a dynamic e-commerce platform tailored for artists and administrators to showcase, manage, and sell customized metal posters. The website facilitates user sign-ups, design uploads, and streamlined management of poster designs, providing a vibrant marketplace for art enthusiasts.",
-    technologies: [
-      { name: "Html", icon: htmlicon },
-      { name: "CSS", icon: cssicon },
-      { name: "JavaScript", icon: javascripticon },
-      { name: "REST Api", icon: apiicon },
-      { name: "JWT", icon: jwticon },
-      { name: "Angular", icon: angularicon },
-      { name: "Node.js", icon: nodejsicon },
-    ],
-    image: kalabhavanMockup,
-    deploymenturl: "https://kalabhavan.vercel.app/",
-    githuburl: "https://github.com/JayashRSY/displate-fe",
-    githubicon: FiGithub,
-    deploymenticon: FiLink,
-    colors: {
-      main: "main-btn",
-      second: "secondary-btn",
-      icon: "white",
-      projectcolor: "#70B9BE",
-    },
-  },
+  // {
+  //   title: "KalaBhavan",
+  //   description:
+  //     "Kalabhavan ist eine dynamische E-Commerce-Plattform, die auf Künstler und Administratoren zugeschnitten ist, um maßgeschneiderte Metallposter zu präsentieren, zu verwalten und zu verkaufen. Die Website erleichtert Benutzeranmeldungen, Design-Uploads und eine optimierte Verwaltung von Posterdesigns und bietet einen lebendigen Marktplatz für Kunstliebhaber.",
+  //   description_EN:
+  //     "Kalabhavan is a dynamic e-commerce platform tailored for artists and administrators to showcase, manage, and sell customized metal posters. The website facilitates user sign-ups, design uploads, and streamlined management of poster designs, providing a vibrant marketplace for art enthusiasts.",
+  //   technologies: [
+  //     { name: "Html", icon: htmlicon },
+  //     { name: "CSS", icon: cssicon },
+  //     { name: "JavaScript", icon: javascripticon },
+  //     { name: "REST Api", icon: apiicon },
+  //     { name: "JWT", icon: jwticon },
+  //     { name: "Angular", icon: angularicon },
+  //     { name: "Node.js", icon: nodejsicon },
+  //   ],
+  //   image: kalabhavanMockup,
+  //   deploymenturl: "https://kalabhavan.vercel.app/",
+  //   githuburl: "https://github.com/JayashRSY/displate-fe",
+  //   githubicon: FiGithub,
+  //   deploymenticon: FiLink,
+  //   colors: {
+  //     main: "main-btn",
+  //     second: "secondary-btn",
+  //     icon: "white",
+  //     projectcolor: "#70B9BE",
+  //   },
+  // },
   {
     title: "WinPlay",
     description:
       "The WinPlay is an engaging real-time betting application developed using the MEAN stack (MongoDB, Express.js, Angular, Node.js) and WebSocket technology. This application allows multiple users to place bets on different colors and view live betting results instantly.",
-    description_EN:
-      "The WinPlay is an engaging real-time betting application developed using the MEAN stack (MongoDB, Express.js, Angular, Node.js) and WebSocket technology. This application allows multiple users to place bets on different colors and view live betting results instantly.",
+    description_de:
+      "Die WinPlay-App ist eine fesselnde Echtzeit-Wettanwendung, die mit dem MEAN-Stack (MongoDB, Express.js, Angular, Node.js) und WebSocket-Technologie entwickelt wurde. Diese Anwendung ermöglicht es mehreren Benutzern, Wetten auf verschiedene Farben abzuschließen und die Live-Wettergebnisse sofort einzusehen.",
     technologies: [
-      { name: "Html", icon: htmlicon },
-      { name: "CSS", icon: cssicon },
-      { name: "JavaScript", icon: javascripticon },
-      { name: "REST Api", icon: apiicon },
-      { name: "JWT", icon: jwticon },
-      { name: "Angular", icon: angularicon },
-      { name: "Node.js", icon: nodejsicon },
+      "angular",
+      "nodejs",
+      "mongodb",
+      "js",
+      "typescript",
+      "materialui",
     ],
     image: winplayMockup,
     deploymenturl: "https://winplay-fe.vercel.app/",
@@ -232,19 +229,18 @@ export const projectsData = [
   {
     title: "Task Tracker",
     description:
-      "Full Stack Task Tracker-App mit intuitiver Benutzeroberfläche und umfassenden Funktionen für effiziente Aufgabenverfolgung und Zusammenarbeit.",
-    description_EN:
       "Full Stack Task Tracker app, offering intuitive user interface and comprehensive features for efficient task tracking and collaboration.",
+    description_de:
+      "Full Stack Task Tracker-App mit intuitiver Benutzeroberfläche und umfassenden Funktionen für effiziente Aufgabenverfolgung und Zusammenarbeit.",
     technologies: [
-      { name: "Html", icon: htmlicon },
-      { name: "CSS", icon: cssicon },
-      { name: "JavaScript", icon: javascripticon },
-      { name: "REST Api", icon: apiicon },
-      { name: "JWT", icon: jwticon },
-      { name: "Angular", icon: angularicon },
-      { name: "Node.js", icon: nodejsicon },
-      { name: "Netlify", icon: netlifyicon },
+      "angular",
+      "nodejs",
+      "mongodb",
+      "js",
+      "typescript",
+      "materialui",
     ],
+
     image: taskMockup,
     deploymenturl: "https://task-tracker-fe-mu.vercel.app/",
     githuburl: "https://github.com/JayashRSY/task-tracker-fe",
@@ -257,65 +253,61 @@ export const projectsData = [
       projectcolor: "#70B9BE",
     },
   },
-  {
-    title: "Kanban Board",
-    description:
-      "Verwalten Sie mühelos Aufgaben mit unserem Kanban-Board-Projekt, das einen visuellen Workflow zum Organisieren von Aufgaben, zur Steigerung der Produktivität und zur Förderung der Teamzusammenarbeit bietet.",
-    description_EN:
-      "Effortlessly manage tasks with our Kanban Board project, providing a visual workflow for organizing tasks, enhancing productivity, and fostering team collaboration.",
-    technologies: [
-      { name: "Html", icon: htmlicon },
-      { name: "CSS", icon: cssicon },
-      { name: "JavaScript", icon: javascripticon },
-      { name: "Netlify", icon: netlifyicon },
-    ],
-    image: kanbanMockup,
-    deploymenturl: "https://jrsy-kanban-board.netlify.app/",
-    githuburl: "https://github.com/JayashRSY/kanban-board",
-    githubicon: FiGithub,
-    deploymenticon: FiLink,
-    colors: {
-      main: "main-btn",
-      second: "secondary-btn",
-      icon: "white",
-      projectcolor: "#FFD5BD",
-    },
-  },
-  {
-    title: "Coding Go",
-    description:
-      "Ermöglichen Sie das Programmieren unterwegs mit unserem webbasierten, reaktionsschnellen Compiler-Projekt, das es Entwicklern ermöglicht, Code geräteübergreifend einfach und effizient zu schreiben, zu kompilieren und zu testen.",
-    description_EN:
-      "Empower coding on-the-go with our web-based responsive compiler project, enabling developers to write, compile, and test code across devices with ease and efficiency.",
-    technologies: [
-      { name: "Html", icon: htmlicon },
-      { name: "CSS", icon: cssicon },
-      { name: "JavaScript", icon: javascripticon },
-      { name: "REST Api", icon: apiicon },
-    ],
-    image: codingMockup,
-    deploymenturl: "https://coding-go.netlify.app/compiler",
-    githuburl: "https://github.com/JayashRSY/codingo",
-    githubicon: FiGithub,
-    deploymenticon: FiLink,
-    colors: {
-      main: "main-btn",
-      second: "secondary-btn",
-      icon: "white",
-      projectcolor: "#E3964A",
-    },
-  },
+  // {
+  //   title: "Kanban Board",
+  //   description:
+  //     "Effortlessly manage tasks with our Kanban Board project, providing a visual workflow for organizing tasks, enhancing productivity, and fostering team collaboration.",
+  //   description_de:
+  //     "Verwalten Sie mühelos Aufgaben mit unserem Kanban-Board-Projekt, das einen visuellen Workflow zum Organisieren von Aufgaben, zur Steigerung der Produktivität und zur Förderung der Teamzusammenarbeit bietet.",
+  //   technologies: [
+  //     { name: "Html", icon: htmlicon },
+  //     { name: "CSS", icon: cssicon },
+  //     { name: "JavaScript", icon: javascripticon },
+  //     { name: "Netlify", icon: netlifyicon },
+  //   ],
+  //   image: kanbanMockup,
+  //   deploymenturl: "https://jrsy-kanban-board.netlify.app/",
+  //   githuburl: "https://github.com/JayashRSY/kanban-board",
+  //   githubicon: FiGithub,
+  //   deploymenticon: FiLink,
+  //   colors: {
+  //     main: "main-btn",
+  //     second: "secondary-btn",
+  //     icon: "white",
+  //     projectcolor: "#FFD5BD",
+  //   },
+  // },
+  // {
+  //   title: "Coding Go",
+  //   description:
+  //     "Empower coding on-the-go with our web-based responsive compiler project, enabling developers to write, compile, and test code across devices with ease and efficiency.",
+  //   description_de:
+  //     "Ermöglichen Sie das Programmieren unterwegs mit unserem webbasierten, reaktionsschnellen Compiler-Projekt, das es Entwicklern ermöglicht, Code geräteübergreifend einfach und effizient zu schreiben, zu kompilieren und zu testen.",
+  //   technologies: [
+  //     { name: "Html", icon: htmlicon },
+  //     { name: "CSS", icon: cssicon },
+  //     { name: "JavaScript", icon: javascripticon },
+  //     { name: "REST Api", icon: apiicon },
+  //   ],
+  //   image: codingMockup,
+  //   deploymenturl: "https://coding-go.netlify.app/compiler",
+  //   githuburl: "https://github.com/JayashRSY/codingo",
+  //   githubicon: FiGithub,
+  //   deploymenticon: FiLink,
+  //   colors: {
+  //     main: "main-btn",
+  //     second: "secondary-btn",
+  //     icon: "white",
+  //     projectcolor: "#E3964A",
+  //   },
+  // },
   {
     title: "Dice Game",
     description:
-      "Erlebe aufregendes Gameplay mit unserem 2-Spieler-Würfelspielprojekt, das interaktiven Spaß und strategische Herausforderungen für Spieler jeden Alters bietet.",
-    description_EN:
       "Engage in thrilling gameplay with our 2-player dice game project, offering interactive fun and strategic challenges for players of all ages.",
-    technologies: [
-      { name: "Html", icon: htmlicon },
-      { name: "CSS", icon: cssicon },
-      { name: "JavaScript", icon: javascripticon },
-    ],
+    description_de:
+      "Erlebe aufregendes Gameplay mit unserem 2-Spieler-Würfelspielprojekt, das interaktiven Spaß und strategische Herausforderungen für Spieler jeden Alters bietet.",
+    technologies: ["html5", "css3", "js", "jquery"],
     image: diceMockup,
     deploymenturl: "https://rollmydice.netlify.app/",
     githuburl: "https://github.com/JayashRSY/dice-game",
@@ -328,52 +320,52 @@ export const projectsData = [
       projectcolor: "#E3964A",
     },
   },
-  {
-    title: "City Search",
-    description:
-      "Erkunden Sie Städte mühelos mit unserem Smart City Search-Projekt, das eine einfache, aber leistungsstarke Autovervollständigungsfunktion für eine nahtlose Navigation und Entdeckung bietet.",
-    description_EN:
-      "Explore cities effortlessly with our Smart City Search project, featuring a simple yet powerful autocomplete function for seamless navigation and discovery.",
-    technologies: [
-      { name: "Html", icon: htmlicon },
-      { name: "CSS", icon: cssicon },
-      { name: "JavaScript", icon: javascripticon },
-    ],
-    image: cityMockup,
-    deploymenturl: "https://smartcitysearch.netlify.app/",
-    githuburl: "https://github.com/JayashRSY/city-smart-search",
-    githubicon: FiGithub,
-    deploymenticon: FiLink,
-    colors: {
-      main: "main-btn",
-      second: "secondary-btn",
-      icon: "white",
-      projectcolor: "#E3964A",
-    },
-  },
-  {
-    title: "Github User Finder",
-    description:
-      "Entdecken Sie GitHub-Benutzer ganz einfach mit unserem Benutzerfinder-Projekt, das eine optimierte Sucherfahrung bietet, um Entwickler zu finden und ihre Profile schnell zu erkunden.",
-    description_EN:
-      "Easily discover GitHub users with our user finder project, providing a streamlined search experience to locate developers and explore their profiles quickly.",
-    technologies: [
-      { name: "Html", icon: htmlicon },
-      { name: "CSS", icon: cssicon },
-      { name: "JavaScript", icon: javascripticon },
-    ],
-    image: gitUserMockup,
-    deploymenturl: "https://githubuserfinder.vercel.app/",
-    githuburl: "https://github.com/JayashRSY/fyle-internship-challenge-23",
-    githubicon: FiGithub,
-    deploymenticon: FiLink,
-    colors: {
-      main: "main-btn",
-      second: "secondary-btn",
-      icon: "white",
-      projectcolor: "#E3964A",
-    },
-  },
+  // {
+  //   title: "City Search",
+  //   description:
+  //     "Explore cities effortlessly with our Smart City Search project, featuring a simple yet powerful autocomplete function for seamless navigation and discovery.",
+  //   description_de:
+  //     "Erkunden Sie Städte mühelos mit unserem Smart City Search-Projekt, das eine einfache, aber leistungsstarke Autovervollständigungsfunktion für eine nahtlose Navigation und Entdeckung bietet.",
+  //   technologies: [
+  //     { name: "Html", icon: htmlicon },
+  //     { name: "CSS", icon: cssicon },
+  //     { name: "JavaScript", icon: javascripticon },
+  //   ],
+  //   image: cityMockup,
+  //   deploymenturl: "https://smartcitysearch.netlify.app/",
+  //   githuburl: "https://github.com/JayashRSY/city-smart-search",
+  //   githubicon: FiGithub,
+  //   deploymenticon: FiLink,
+  //   colors: {
+  //     main: "main-btn",
+  //     second: "secondary-btn",
+  //     icon: "white",
+  //     projectcolor: "#E3964A",
+  //   },
+  // },
+  // {
+  //   title: "Github User Finder",
+  //   description:
+  //     "Easily discover GitHub users with our user finder project, providing a streamlined search experience to locate developers and explore their profiles quickly.",
+  //   description_de:
+  //     "Entdecken Sie GitHub-Benutzer ganz einfach mit unserem Benutzerfinder-Projekt, das eine optimierte Sucherfahrung bietet, um Entwickler zu finden und ihre Profile schnell zu erkunden.",
+  //   technologies: [
+  //     { name: "Html", icon: htmlicon },
+  //     { name: "CSS", icon: cssicon },
+  //     { name: "JavaScript", icon: javascripticon },
+  //   ],
+  //   image: gitUserMockup,
+  //   deploymenturl: "https://githubuserfinder.vercel.app/",
+  //   githuburl: "https://github.com/JayashRSY/fyle-internship-challenge-23",
+  //   githubicon: FiGithub,
+  //   deploymenticon: FiLink,
+  //   colors: {
+  //     main: "main-btn",
+  //     second: "secondary-btn",
+  //     icon: "white",
+  //     projectcolor: "#E3964A",
+  //   },
+  // },
 ] as const;
 
 export const liveTickerData = {
@@ -415,7 +407,7 @@ export const skillsDataWeb = [
         title: "Angular",
         hash: "#Angular",
         icon: angularicon,
-        color: "#61DAFB",
+        color: "#F44336",
       },
       {
         title: "React",
@@ -436,24 +428,6 @@ export const skillsDataWeb = [
         color: "#339933",
       },
       {
-        title: "Tailwind",
-        hash: "#Tailwind",
-        icon: tailwindcssicon,
-        color: "#38B2AC",
-      },
-      {
-        title: "MongoDB",
-        hash: "#MongoDB",
-        icon: mongodbicon,
-        color: "#449C45",
-      },
-      // {
-      //   title: "Vue.js",
-      //   hash: "#Vue.js",
-      //   icon: vuejsicon,
-      //   color: "#4FC08D",
-      // },
-      {
         title: "Express",
         hash: "#Express",
         icon: [expressicon, expressiconwhite],
@@ -464,6 +438,42 @@ export const skillsDataWeb = [
         hash: "#SASS/SCSS",
         icon: sassscssicon,
         color: "#CC6699",
+      },
+      {
+        title: "Bootstrap",
+        hash: "#Bootstrap",
+        icon: bootstrapicon,
+        color: "#7952B3",
+      },
+      {
+        title: "Tailwind",
+        hash: "#Tailwind",
+        icon: tailwindcssicon,
+        color: "#38B2AC",
+      },
+      {
+        title: "ChakraUI",
+        hash: "#ChakraUI",
+        icon: chakrauiicon,
+        color: "#48C8C2",
+      },
+      {
+        title: "Redux",
+        hash: "#Redux",
+        icon: reduxicon,
+        color: "#764ABC",
+      },
+      {
+        title: "MongoDB",
+        hash: "#MongoDB",
+        icon: mongodbicon,
+        color: "#449C45",
+      },
+      {
+        title: "Python",
+        hash: "#Python",
+        icon: pythonicon,
+        color: "#366F9E",
       },
       {
         title: "AWS",
