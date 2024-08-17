@@ -25,11 +25,12 @@ import shopifyicon from "../../assets/icons/shopifyicon.svg";
 import webflowicon from "../../assets/icons/webflowicon.svg";
 // import tastyMockup from "../../assets/img/tasty_mockup.webp";
 import taskMockup from "../../assets/img/projects/task-tracker.png";
-import winplayMockup from "../../assets/img/projects/winplay.png";
+import winplayMockup from "../../assets/img/projects/winplay.jpeg";
 // import kalabhavanMockup from "../../assets/img/projects/kalabhavan.png";
-import innov8Mockup from "../../assets/img/projects/innov8.png";
+import innov8Mockup from "../../assets/img/projects/innov8.jpeg";
 // import kanbanMockup from "../../assets/img/projects/kanban.png";
 import landlordMockup from "../../assets/img/projects/landlord.png";
+import taskifyMockup from "../../assets/img/projects/taskify.png";
 import promptPediaMockup from "../../assets/img/projects/prompt-pedia.png";
 import diceMockup from "../../assets/img/projects/dice-game.png";
 // import codingMockup from "../../assets/img/projects/compiler.png";
@@ -137,6 +138,32 @@ export const projectsData = [
     image: landlordMockup,
     deploymenturl: "https://landlord-one.vercel.app/",
     githuburl: "https://github.com/JayashRSY/landlord",
+    githubicon: FiGithub,
+    deploymenticon: FiLink,
+    colors: {
+      main: "main-btn",
+      second: "secondary-btn",
+      icon: "white",
+      projectcolor: "#70B9BE",
+    },
+  },
+  {
+    title: "Taskify",
+    description:
+      "Taskify is a dynamic task management application developed using React.js, Node.js, TypeScript, and MongoDB, styled with Tailwind CSS. The app features user authentication for seamless login and signup, allowing users to create and manage boards and tasks efficiently. It supports drag-and-drop functionality for task status updates across categories such as To-Do, In Progress, and Done. Users can assign tasks to team members, share boards with colleagues, and maintain a clear overview of project tickets, enhancing collaboration and productivity in team environments.",
+    description_de:
+      "Taskify ist eine dynamische Aufgabenverwaltungsanwendung, die mit React.js, Node.js, TypeScript und MongoDB entwickelt und mit Tailwind CSS formatiert wurde. Die App bietet Benutzerauthentifizierung für eine nahtlose Anmeldung und Anmeldung, sodass Benutzer Boards und Aufgaben effizient erstellen und verwalten können. Es unterstützt die Drag-and-Drop-Funktionalität für Aktualisierungen des Aufgabenstatus in Kategorien wie 'To-Do', 'In Bearbeitung' und 'Fertig'. Benutzer können Teammitgliedern Aufgaben zuweisen, Boards mit Kollegen teilen und einen klaren Überblick über Projekttickets behalten, um die Zusammenarbeit und Produktivität in Teamumgebungen zu verbessern.",
+    technologies: [
+      "reactjs",
+      "nodejs",
+      "tailwindcss",
+      "js",
+      "typescript",
+      "mongodb",
+    ],
+    image: taskifyMockup,
+    deploymenturl: "https://taskify-me.vercel.app",
+    githuburl: "https://github.com/JayashRSY/taskify-ui",
     githubicon: FiGithub,
     deploymenticon: FiLink,
     colors: {
